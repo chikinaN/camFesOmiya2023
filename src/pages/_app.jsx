@@ -27,7 +27,7 @@ const MyApp = ({ Component, pageProps }) => {
   return <Component {...pageProps} />;
 };
 
-MyApp.getInitialProps = async (appContext) => {
+MyApp.getServerSideProps = async (appContext) => {
   const appProps = await App.getInitialProps(appContext);
   return { ...appProps };
 };
