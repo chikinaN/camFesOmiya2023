@@ -1,35 +1,55 @@
 import '@/styles/globals.css'
-
+import Head from 'next/head';
 import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
-import App from 'next/app';
+
+const redirectRegex = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
 
 const MyApp = ({ Component, pageProps }) => {
   const router = useRouter();
+  const asPath = router.asPath
+  console.log(asPath)
+  const userAgent = typeof window !== 'undefined' ? window.navigator.userAgent : null;
+  const AgentPath = ['/mobile','/PC']
 
   useEffect(() => {
-    const userAgent = navigator.userAgent || '';
-    const redirectRegex = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
-
-    if (redirectRegex.test(userAgent)) {
-      // スマホの場合は/mobileにリダイレクト
-      if (!window.location.pathname.startsWith('/mobile')) {
-        router.push('/mobile');
+    if (userAgent) {
+      // ユーザーエージェントに応じてリダイレクト先を決定
+      const isMobile = redirectRegex.test(userAgent);
+      if (asPath.startsWith(AgentPath[0])) {
+        if (!isMobile) {
+          router.push(asPath.replace(/^\/mobile/, '/PC'));
+        }
+      } else if (asPath.startsWith(AgentPath[1])) {
+        if (isMobile) {
+          router.push(asPath.replace(/^\/PC/, '/mobile'));
+        }
+      } else {
+        if (isMobile) {
+          router.push(AgentPath[0] + asPath)
+        } else {
+          router.push(AgentPath[1] + asPath)
+        }
       }
-    } else {
-      // PCの場合は/PCにリダイレクト
-      if (!window.location.pathname.startsWith('/PC')) {
-        router.push('/PC');
+
+      if (asPath.startsWith('/mobile') && !isMobile) {
+        // /mobileから/mobileを削除して/PCを追加
+        router.push(asPath.replace(/^\/mobile/, '/PC'));
+      } else if (asPath.startsWith('/PC') && isMobile) {
+        // /PCから/PCを削除して/mobileを追加
+        router.push(asPath.replace(/^\/PC/, '/mobile'));
       }
     }
-  }, []);
+  }, [userAgent, asPath]);
 
-  return <Component {...pageProps} />;
-};
-
-MyApp.getServerSideProps = async (appContext) => {
-  const appProps = await App.getInitialProps(appContext);
-  return { ...appProps };
+  return (
+    <>
+      <Head>
+        <title>キャンフェス大宮2023</title>
+      </Head>
+      <Component {...pageProps} />
+    </>
+  );
 };
 
 export default MyApp;
