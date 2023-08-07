@@ -1,5 +1,9 @@
 const PCComponent = () => {
-  return <h1>PC版</h1>;
+  return (
+    <div>
+      <h1>PC版</h1>
+    </div>
+  );
 };
 
 export default PCComponent
