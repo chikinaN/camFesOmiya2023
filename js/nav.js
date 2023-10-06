@@ -62,7 +62,14 @@ const buildLinkMenu = (pageList, currentName) => {
 }
 
 const navList = (pageList) => {
-  const path = location.pathname
+  const formatPathname = (pathname) => {
+    // 環境変数を使いたいがnodejsを中途半端に使う方法がわからない
+    const prefix = '/camFesOmiya2023';
+    pathname = pathname.replace(prefix, '');
+    pathname = pathname.replace('index.html', '');
+    return pathname;
+  }
+  const path = formatPathname(location.pathname);
   const currentData = pageList.filter((data) => data.path == path)[0]
   const h3Title = '<h3>キャンフェス<br>〜京都〜<br>In大宮</h3>'
   const icon = '<img src="public/img/camfes2023_logo_min.png" alt="icon" id="icon">'
