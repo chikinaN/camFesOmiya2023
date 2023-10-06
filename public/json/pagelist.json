@@ -9,5 +9,10 @@
 		"name": "timeTable",
 		"jaName": "タイムテーブル",
 		"path": "/timetable.html"
+	},{
+		"id": 3,
+		"name": "project",
+		"jaName": "企画一覧",
+		"path": "/project.html"
 	}
 ]
