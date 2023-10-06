@@ -12,7 +12,7 @@ const fetchNav = async (url) => {
   }
 };
 
-fetchNav('../public/json/pagelist.json')
+fetchNav('public/json/pagelist.json')
   .then(jsonData => {
 		navList(jsonData)
   })
