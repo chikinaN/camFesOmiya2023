@@ -14,5 +14,10 @@
 		"name": "project",
 		"jaName": "企画一覧",
 		"path": "/project.html"
+	},{
+		"id": 4,
+		"name": "access",
+		"jaName": "アクセス",
+		"path": "/access.html"
 	}
 ]
