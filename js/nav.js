@@ -73,31 +73,38 @@ const navList = (pageList) => {
   const currentData = pageList.filter((data) => data.path == path)[0]
   const h3Title = '<h3>キャンフェス<br>〜京都〜<br>In大宮</h3>'
   const icon = '<img src="public/img/camfes2023_logo_min.png" alt="icon" id="icon">'
-  const menuTitle = "<header id='menuTitle'>" + h3Title + icon + '<h5 id="testData">1</h5></header>'
+  const menuTitle = "<header id='menuTitle'>" + h3Title + icon + '</header>'
   const currentMenu = "<ul id='currentMenu'>" + buildCurrentMenu(0) + '</ul>'
 	const menu = document.getElementById("nav-list");
   const LinkMenu = buildLinkMenu(pageList, currentData.name)
 	menu.innerHTML = menuTitle + currentMenu + LinkMenu
 }
+
+const findScrollSection = (scrollTop, sectionOffsets) => {
+  for (let i = 0; i < sectionOffsets.length; i++) {
+    const [sectionTop, sectionBottom] = sectionOffsets[i];
+    // console.log([scrollTop, sectionOffsets[i]])
+    // document.getElementById('testData').innerHTML = sectionOffsets[i]
+    if (scrollTop + 10 >= sectionTop && scrollTop + 10 < sectionBottom) {
+      return i;
+    }
+  }
+}
+
+const getSectionOffsets = (sections) => {
+  const offsets = [];
+  sections.forEach(section => {
+    const offsetTop = section.offsetTop;
+    const offsetBottom = offsetTop + section.clientHeight;
+    offsets.push([offsetTop, offsetBottom]);
+  });
+  return offsets;
+}
+
 const article = document.querySelectorAll('body > article')[0]
 const getCurrentSection = () => {
   const sections = document.querySelectorAll('body > article > section');
-  const scrollPosition = article.scrollTop;
-  let currentSection = 0;
-
-  for (let i = 0; i < sections.length; i++) {
-    const section = sections[i];
-    const sectionTop = section.offsetTop;
-    const sectionBottom = sectionTop + section.clientHeight;
-
-    if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-      document.getElementById('testData').innerHTML = i
-      currentSection = i;
-      break;
-    }
-  }
-
-  return currentSection;
+  return findScrollSection(article.scrollTop, getSectionOffsets(sections));
 }
 const setCurrentMenu = (indexNumber) => {
   const currentMenu = document.getElementById('currentMenu')

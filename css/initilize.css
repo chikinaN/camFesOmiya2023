@@ -56,5 +56,6 @@ img {
 	vertical-align: -webkit-baseline-middle;
 	max-width: 100%;
 	height: auto;
+	object-fit: cover;
 	width /***/:auto;
 }
