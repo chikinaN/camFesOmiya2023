@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h2:hover{
+    font-size: 60px;
+    color: lightseagreen;
+    transition: 1s;
+}
+
+.all{
+    height: auto;
+    width: 100vw;
+}
