@@ -3,5 +3,6 @@
 		"colspan",
 		"ONED",
 		"Yomogi"
-	]
+	],
+	"liveServer.settings.port": 5501
 }
