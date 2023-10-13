@@ -18,8 +18,20 @@ h2:hover{
     padding-bottom: 40px;
     background-color: rgba(255, 255, 255, 0.3);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    width: 1000px;
+    width: 80%;
     margin: 0 auto;}
+
+    @media screen and (max-width: 428px) {
+      .tabs {
+        margin-top: 50px;
+        padding-bottom: 40px;
+        background-color: rgba(255, 255, 255, 0.3);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        width: 80%;
+        margin: 0 auto;
+
+      }
+    }
   
   /*タブのスタイル*/
   .tab_item {
@@ -68,9 +80,7 @@ h2:hover{
     color: #fff;
   }
 
-img{
-    width: 40%;
-}
+
 .tea_div{
     display: flex;
 }
@@ -82,4 +92,10 @@ img{
     display: flex;
     justify-content: space-around;
     margin-top: 20px;
+}
+.main_tako_div{
+  width: 40%;
+}
+img{
+  width: 100%;
 }
