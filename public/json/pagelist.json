@@ -11,9 +11,9 @@
 		"path": "/timetable.html"
 	},{
 		"id": 3,
-		"name": "project",
+		"name": "projects",
 		"jaName": "企画一覧",
-		"path": "/project.html"
+		"path": "/projects.html"
 	},{
 		"id": 4,
 		"name": "access",
