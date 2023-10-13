@@ -19,5 +19,10 @@
 		"name": "access",
 		"jaName": "アクセス",
 		"path": "/access.html"
+	},{
+		"id" : 5,
+		"name": "food",
+		"jaName" : "フード",
+		"path" : "/food.html"
 	}
 ]
