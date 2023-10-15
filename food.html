@@ -36,63 +36,34 @@
 		<ul id="sideIndex"></ul>
 		<article>
 			<section id="food">
-				<h2>フード</h2>
-                <div id="all_item">
-					<div class="tabs">
-						<input id="all" type="radio" name="tab_item" checked>
-						<label class="tab_item" for="all">フード一覧</label>
-						<input id="programming" type="radio" name="tab_item">
-						<label class="tab_item" for="programming">たこ焼き</label>
-						<input id="design" type="radio" name="tab_item">
-						<label class="tab_item" for="design">お茶企画</label>
-						<div class="tab_content" id="all_content">
-						  <div class="tab_content_description">
-							<div class="menu_div">
-								<div class="menu_top">
-									<div class="main_tako_div">
-										<p class="main_text">たこ焼き</p>
-										<img src="public/img/food/tako.jpg" alt="">
-									</div>
-									<div class="main_tako_div">
-										<p class="main_text">お茶会</p>
-										<img src="public/img/food/tea1.jpg" alt="">
-									</div>
-								</div>
-								<div class="menu_second">
-									<div class="main_tako_div">
-										<p class="main_text">たけのこ</p>
-										<img src="public/img/food/takenoko.jpg" alt="">
-									</div>
-									<div class="main_tako_div">
-										<p class="main_text">たこ焼き</p>
-										<img src="public/img/food/cafe_demo.png" alt="">
-									</div>
-								</div>
-							</div>
-						  </div>
-						</div>
-						<div class="tab_content" id="programming_content">
-						  <div class="tab_content_description">
-							<p class="c-txtsp">たこ焼きの詳細がここに入ります</p>
-							<div class="takoyaki_div">
-								<img src="public/img/food/tako.jpg" alt="">
-							</div>
-						  </div>
-						</div>
-						<div class="tab_content" id="design_content">
-						  <div class="tab_content_description">
-							<p class="c-txtsp">お茶企画の詳細がここに入ります</p>
-							<div class="tea_div">
-								<img src="public/img/food/tea1.jpg" alt="">
-								<img src="public/img/food/tea2.jpg" alt="">
-							</div>
-						  </div>
-						</div>
-					  </div>
-
-                </div>
+				<h2 >フード</h2>
+				<div class="tab-container">
+					<div class="tab" onclick="openTab(1)">フード一覧1</div>
+					<div class="tab" onclick="openTab(2)">たこ焼き企画 2</div>
+					<div class="tab" onclick="openTab(3)">タブ 3</div>
+					<div class="tab" onclick="openTab(4)">タブ 4</div>
+					<div class="tab" onclick="openTab(5)">タブ 5</div>
+				</div>
+				
+				<div class="tab-content" id="tab1">フード一覧ページ</div>
+				<div class="tab-content" id="tab2">たこ焼き企画の詳細</div>
+				<div class="tab-content" id="tab3">カフェ企画の詳細</div>
+				<div class="tab-content" id="tab4"></div>
+				<div class="tab-content" id="tab5">タブ 5 のコンテンツ</div>
+			
+				<script>
+					function openTab(tabNumber) {
+						var i, tabContents;
+			
+						tabContents = document.getElementsByClassName("tab-content");
+						for (i = 0; i < tabContents.length; i++) {
+							tabContents[i].classList.remove("active");
+						}
+			
+						document.getElementById("tab" + tabNumber).classList.add("active");
+					}
+				</script>
 			</section>
-			<section></section>
 		</article>
 		<footer></footer>
 	</body>
