@@ -11,7 +11,6 @@ const formatUnderLine = () => {
     const cardText = card.querySelector('aside > p');
     const fontSize = parseInt(window.getComputedStyle(cardText).getPropertyValue('font-size'));
     const textLength = Math.floor(cardText.offsetWidth / fontSize);
-    console.log(textLength);
     function formatText(initializeText) {
       const cleanedText = initializeText.replace(/<\/?span[^>]*>/g, '');
       return cleanedText;
@@ -44,10 +43,8 @@ const formatUnderLine = () => {
       }
       return resultArray;
     };
-    console.log(formatText(initializeElements[i]))
 
     const formattedArray = formatCardText(formatText(initializeElements[i]), textLength);
-    console.log(formattedArray.map(item => `<span>${item}</span>`).join(' '));
     cardText.innerHTML = formattedArray.map(item => `<span>${item}</span>`).join(' ');
   }
 }

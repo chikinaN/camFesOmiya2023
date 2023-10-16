@@ -3,7 +3,7 @@
 		{
 			"id": 1,
 			"title": "エナドリの魅力",
-			"user": "ちきな",
+			"performer": "ちきな",
 			"type": 1,
 			"date": {
 				"month": 10,
@@ -13,11 +13,12 @@
 				"hour": 10,
 				"minutes": 30
 			},
-			"duration": 30
+			"timeRequired": 30,
+			"duration": 5
 		},{
 			"id": 2,
 			"title": "hogehoge",
-			"user": "hoge",
+			"performer": "hoge",
 			"type": 2,
 			"date": {
 				"month": 10,
@@ -25,13 +26,14 @@
 			},
 			"time": {
 				"hour": 11,
-				"minutes": 0
+				"minutes": 5
 			},
-			"duration": 30
+			"timeRequired": 30,
+			"duration": 5
 		},{
 			"id": 3,
 			"title": "hogehoge",
-			"user": "hoge",
+			"performer": "hoge",
 			"type": 1,
 			"date": {
 				"month": 10,
@@ -39,16 +41,17 @@
 			},
 			"time": {
 				"hour": 11,
-				"minutes": 30
+				"minutes": 40
 			},
-			"duration": 30
+			"timeRequired": 30,
+			"duration": 5
 		}
 	],
 	"ONED": [
 		{
 			"id": 1,
 			"title": "エナドリの魅力",
-			"user": "ちきな",
+			"performer": "ちきな",
 			"type": 1,
 			"date": {
 				"month": 10,
@@ -58,11 +61,12 @@
 				"hour": 10,
 				"minutes": 30
 			},
-			"duration": 30
+			"timeRequired": 30,
+			"duration": 5
 		},{
 			"id": 2,
 			"title": "hogehoge",
-			"user": "hoge",
+			"performer": "hoge",
 			"type": 2,
 			"date": {
 				"month": 10,
@@ -70,13 +74,14 @@
 			},
 			"time": {
 				"hour": 11,
-				"minutes": 0
+				"minutes": 5
 			},
-			"duration": 30
+			"timeRequired": 30,
+			"duration": 5
 		},{
 			"id": 3,
 			"title": "hogehoge",
-			"user": "hoge",
+			"performer": "hoge",
 			"type": 1,
 			"date": {
 				"month": 10,
@@ -84,9 +89,61 @@
 			},
 			"time": {
 				"hour": 11,
+				"minutes": 10
+			},
+			"timeRequired": 30,
+			"duration": 5
+		}
+	],
+	"DJ": [
+		{
+			"id": 1,
+			"title": "エナドリの魅力",
+			"performer": "ちきな",
+			"type": 1,
+			"date": {
+				"month": 10,
+				"day": 31
+			},
+			"time": {
+				"hour": 10,
 				"minutes": 30
 			},
-			"duration": 30
+			"timeRequired": 30,
+			"duration": 5
+		}
+	],
+	"smashBros": [
+		{
+			"id": 1,
+			"title": "エナドリの魅力",
+			"performer": "ちきな",
+			"type": 1,
+			"date": {
+				"month": 10,
+				"day": 31
+			},
+			"time": {
+				"hour": 10,
+				"minutes": 30
+			},
+			"timeRequired": 30,
+			"duration": 5
+		},{
+			"id": 2,
+			"title": "エナドリの魅力",
+			"performer": "ちきな",
+			"type": 1,
+			"date": {
+				"month": 10,
+				"day": 30
+			},
+			"time": {
+				"hour": 10,
+				"minutes": 30
+			},
+			"timeRequired": 30,
+			"duration": 5
 		}
 	]
 }

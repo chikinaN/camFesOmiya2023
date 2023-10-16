@@ -123,6 +123,19 @@ nav#nav-list ul#currentMenu {
 nav#nav-list ul#linkMenu {
 	flex: 3;
 }
+nav#nav-list ul#currentMenu li,
+nav#nav-list ul#linkMenu li {
+	position: relative;
+}
+nav#nav-list ul#currentMenu li::after,
+nav#nav-list ul#linkMenu li::after {
+	position: absolute;
+	content: '';
+	width: 80%;
+	height: 1px;
+	background-color: #fff;
+	bottom: 5px;
+}
 header#menuTitle h3 {
 	font-size: 48px;
 	color: rgb(255 255 255 / 100%);
@@ -251,7 +264,7 @@ body article > section {
 	height: 100vh;
 	overflow: hidden;
 	color: rgb(255 255 255 / 100%);
-	text-shadow: 0 1px 3px rgb(50 50 50 / 100%);
+	text-shadow: 0 1px 3px rgb(0 0 0 / 100%);
 	background-color: var(--glass-color);
 	backdrop-filter: blur(var(--glass-blur));
 	backdrop-filter: blur(var(--glass-blur));
@@ -448,14 +461,14 @@ section.card > aside > h4 {
 	font-size: 28px;
 	padding-top: 20px;
 	padding-bottom: 40px;
-	text-shadow: 0 1px 3px rgb(50 50 50 / 100%);
+	text-shadow: 0 1px 3px rgb(0 0 0 / 100%);
 }
 
 section.card > aside > p {
 	width: 100%;
 	font-size: 20px;
 	line-height: 2em;
-	text-shadow: 0 1px 3px rgb(50 50 50 / 100%);
+	text-shadow: 0 1px 3px rgb(0 0 0 / 100%);
 }
 section.card > aside > p > span {
 	position: relative;
@@ -510,7 +523,7 @@ section.card:nth-child(2n + 1) > img {
 		padding-bottom: 20px;
 	}
 	section.card > aside > p {
-		font-size: 16px;
+		font-size: 20px;
 	}
 	section.card:nth-child(2n + 1) > aside {
 		order: 2;

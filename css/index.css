@@ -68,20 +68,46 @@ section#time-table h2 {
 	margin-bottom: 100px;
 	text-align: center;
 }
+section#time-table p {
+	width: 80vw;
+	margin: 0 auto;
+	margin-bottom: 50px;
+	font-size: 20px;
+}
+section#time-table p span.small {
+	font-size: 16px;
+}
 
 section#time-table h3 {
-	padding-bottom: 30px;
-	font-size: large;
+	position: relative;
+	width: 80vw;
+	margin: 0 auto;
+	margin-bottom: 30px;
+	font-size: 20px;
 	text-align: center;
+}
+section#time-table h3::after {
+	position: absolute;
+	content: '';
+	width: 30%;
+	height: 1px;
+	bottom: -10px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: rgb(255, 255, 255);
 }
 
 .s-table th,
 .s-table td {
 	flex-grow: 1;
 	padding: 10px;
-  border: 1px solid black;
+  border: 1px solid rgb(200, 200, 200);
 }
-
+.s-table th a,
+.s-table td a {
+	text-decoration: none;
+	color: rgb(255, 255, 255);
+}
 .s-table {
 	box-sizing: border-box;
 	display: flex;
@@ -90,7 +116,7 @@ section#time-table h3 {
 	width: 100%;
 	padding-top: 0;
 	padding-right: 10vw;
-	padding-bottom: 50px;
+	padding-bottom: 20px;
 	padding-left: 10vw;
 	table-layout: auto;
 	border-collapse: collapse;
@@ -108,6 +134,43 @@ section#time-table h3 {
 .s-table td {
 	width: 60vw;
 }
+#notice-table {
+	table-layout: fixed;
+	margin: 0 auto;
+	width: 70vw;
+	height: 75vh;
+	border-collapse: collapse;
+}
+#notice-table tbody {
+	width: 100%;
+	height: 100%;
+	overflow: scroll;
+}
+#notice-table th,
+#notice-table td {
+	font-size: 20px;
+}
+#notice-table th {
+	box-sizing: border-box;
+	width: 30vw;
+	min-width: 150px;
+	text-align: left;
+	padding: 4px 0;
+}
+#notice-table td {
+	box-sizing: border-box;
+	width: 70vw;
+	text-align: left;
+	padding: 4px 0;
+}
+#notice-table tr {
+	width: 100%;
+	border-bottom: 1px solid rgb(255, 255, 255);
+}
+#notice-table tr:first-child {
+	border-top: 1px solid rgb(255, 255, 255);
+}
+
 
 @media screen and (max-width: 428px) {
 	section#title h1 {

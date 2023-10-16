@@ -24,5 +24,10 @@
 		"name": "food",
 		"jaName" : "フード",
 		"path" : "/food.html"
+	},{
+		"id" : 6,
+		"name": "about",
+		"jaName" : "キャンフェスとは",
+		"path" : "/about.html"
 	}
 ]
