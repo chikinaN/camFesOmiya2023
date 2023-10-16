@@ -11,13 +11,23 @@
 		"path": "/timetable.html"
 	},{
 		"id": 3,
-		"name": "project",
+		"name": "projects",
 		"jaName": "企画一覧",
-		"path": "/project.html"
+		"path": "/projects.html"
 	},{
 		"id": 4,
 		"name": "access",
 		"jaName": "アクセス",
 		"path": "/access.html"
+	},{
+		"id" : 5,
+		"name": "food",
+		"jaName" : "フード",
+		"path" : "/food.html"
+	},{
+		"id" : 6,
+		"name": "about",
+		"jaName" : "キャンフェスとは",
+		"path" : "/about.html"
 	}
 ]

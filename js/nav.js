@@ -83,8 +83,6 @@ const navList = (pageList) => {
 const findScrollSection = (scrollTop, sectionOffsets) => {
   for (let i = 0; i < sectionOffsets.length; i++) {
     const [sectionTop, sectionBottom] = sectionOffsets[i];
-    // console.log([scrollTop, sectionOffsets[i]])
-    // document.getElementById('testData').innerHTML = sectionOffsets[i]
     if (scrollTop + 10 >= sectionTop && scrollTop + 10 < sectionBottom) {
       return i;
     }

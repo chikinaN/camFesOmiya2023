@@ -7,7 +7,7 @@
 		<link rel="icon" href="public/img/camfes2023.ico">
 		<link rel="stylesheet" href="css/initilize.css">
 		<link rel="stylesheet" href="css/base.css">
-		<link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/food.css">
 		<!-- 画像が重いので事前読み込み -->
 		<link rel="preload" href="public/sample/random_Kyoto_1.jpg" as="image">
 		<link rel="preload" href="public/sample/random_Kyoto_2.jpg" as="image">
@@ -35,8 +35,96 @@
 		</header>
 		<ul id="sideIndex"></ul>
 		<article>
-			<section>
-				<h2></h2>
+			<section id="food">
+				<h2 >フード</h2>
+				<div class="tab-container">
+					<div class="tab" onclick="openTab(1)">フード一覧</div>
+					<div class="tab" onclick="openTab(2)">やみたこ</div>
+					<div class="tab" onclick="openTab(3)">大宮茶会事件</div>
+					<div class="tab" onclick="openTab(4)">きのたけ平和ショップ</div>
+					<div class="tab" onclick="openTab(5)">きつねのほこら</div>
+				</div>
+				
+				<div class="tab-content" id="tab1">
+					<h4>フード一覧</h4>
+					<div class="main">
+						<div class="main_on">
+							<figure>
+								<figcaption>やみたこ</figcaption>
+								<img src="public/img/food/tako.jpg" alt="">
+							</figure>
+							<figure>
+								<figcaption>大宮茶会事件</figcaption>
+								<img src="public/img/food/tea1.jpg" alt="">
+							</figure>
+						</div>
+						<div class="main_on">
+							<figure>
+								<figcaption>きのこたけのこ平和ショップ</figcaption>
+								<img src="public/img/food/takenoko.jpg" alt="">
+
+							</figure>
+							<figure>
+								<figcaption>きつねのほこら</figcaption>
+								<img src="public/img/food/cafe_demo.png" alt="">
+							</figure>
+						</div>
+					</div>
+				</div>
+				<div class="tab-content" id="tab2">
+					<p class="tako_title">やみたこ（たこ焼き）</p>
+					<div class="tako_div">
+						<img src="public/img/food/tako.jpg" alt="" class="tako_img">
+						<div>
+							<p class="tako_text"><span>企画概要</span><br>闇鍋要素を入れたたこ焼きを販売します。普通のたこやきもあります。</p>
+							<p class="tako_text"><span>開催場所・時間</span><br>8F　フードエリア・OPから10分後〜ED10分前まで
+								なくなり次第終了です。
+								</p>
+						</div>
+					</div>
+				</div>
+				<div class="tab-content" id="tab3">
+					<p class="tako_title">大宮茶会事件</p>
+					<div class="tea_all">
+						<div>
+							<img src="public/img/food/tea1.jpg" alt="">
+							<img src="public/img/food/tea2.jpg" alt="">
+						</div>
+						<div>
+							<p class="tea_text"><span>企画概要</span><br>茶道体験（予約制）&紅茶注ぎ選手権を開催します！</p>
+							<p class="tea_text"><span>開催場所・時間</span><br>8F　フードエリア・OPから10分後〜ED10分前までなくなり次第終了です。</p>
+						</div>
+					</div>
+
+				</div>
+				<div class="tab-content" id="tab4">
+					<p class="tako_title">きのこたけのこ平和ショップ</p>
+					<div class="takenoko_all"> 
+						<div class="">
+							<p class="takenoko_text"><span>企画概要</span><br>我々はきのこたけのこ戦争の終結を望んでいます<br>
+								この度は両者の関係を安定化させるために、<br>きのこの山とたけのこの里を共に販売することにしました
+								ぜひ足を運んでみてください<br>平和万歳！！！！！</p>
+							<p class="takenoko_text"><span>開催場所・時間</span>8F　フードエリア・OPから10分後〜ED10分前まで
+								なくなり次第終了です。
+								</p>
+						</div>
+						<img src="public/img/food/takenoko.jpg" alt="">
+					</div>
+				</div>
+				<div class="tab-content" id="tab5"></div>
+			
+				<script>
+					function openTab(tabNumber) {
+						var i, tabContents;
+			
+						tabContents = document.getElementsByClassName("tab-content");
+						for (i = 0; i < tabContents.length; i++) {
+							tabContents[i].classList.remove("active");
+						}
+			
+						document.getElementById("tab" + tabNumber).classList.add("active");
+					}
+				</script>
 			</section>
 		</article>
 		<footer></footer>

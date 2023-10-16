@@ -1,0 +1,30 @@
+.container{
+    margin: 0 50px;
+    display:flex;
+    text-align: center;
+    box-sizing: border-box;
+    height: calc(100% - 150px);
+    flex-flow: row wrap;
+    justify-content: center;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.card{
+    color: black;
+    border: solid 1px #fff;
+    text-align: center;
+    background-color: #fff;
+    width: 25vw;
+    height: 25vh;
+    margin: 10px;
+}
+
+.card {}

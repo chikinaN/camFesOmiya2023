@@ -1,0 +1,99 @@
+
+.tab-container {
+  display: flex;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  background-color: #19302A;
+  border-radius: 10px 10px 0 0;
+}
+
+.tab:hover {
+  background-color: #e0e0e0;
+}
+
+.tab-content {
+  display: none;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 80vw;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+.tab-content.active {
+  display: block;
+}
+.tab.active{
+  background-color: #ccc;
+}
+
+/*@media screen and (max-width: 428px) {
+  .クラス名 {}
+}*/
+
+
+h4{
+  text-align: center;
+}
+img{
+  object-fit: cover;
+  width: 30vw;
+  height: 30vh;
+  border-radius: 10px;
+}
+@media screen and (max-width: 428px) {
+  .img {
+    height: 15vh;
+    width: 30vw;
+    object-fit: cover;
+  }
+}
+.main_on{
+  display: flex;
+  justify-content: space-around;
+}
+.tako_div{
+  display: flex;
+  padding: 20px;
+  margin-top: 10vh;
+}
+.tako_text{
+  padding-left: 10%;
+}
+span{
+  font-weight: bold;
+  color: lightseagreen;
+  font-size: large;
+}
+.tako_title{
+  font-size: 30px;
+  text-align: center;
+  color: lightseagreen;
+  padding: 10px;
+}
+.tea_all{
+  display: flex;
+}
+.tea_text{
+  font-size: 20px;
+  padding: 20px;
+  padding-top: 10vh;
+}
+.takenoko_text{
+  padding: 20px;
+}
+
+.takenoko_all{
+  display: flex;
+  padding: 20px;
+  margin-top: 50px;
+}
+
