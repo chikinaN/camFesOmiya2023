@@ -15,85 +15,110 @@ const fetchTable = async (url) => {
 fetchTable('../public/json/timeTable.json')
   .then(jsonData => {
 		sTable(jsonData)
+		timeData(jsonData)
   })
   .catch(error => {
     console.error('An error occurred:', error);
   });
 
-const calcTime = (hour, minutes, duration) => {
-	const totalMinutes = minutes + duration;
+const idName = [
+	{
+		name: "stage",
+		jaName: "ステージ"
+	},{
+		name: "ONED",
+		jaName: "ONED"
+	},{
+		name: "DJ",
+		jaName: "DJ企画"
+	},{
+		name: "smashBros",
+		jaName: "スマブラ企画"
+	}
+]
+const formatIdName = (id) => {
+	return idName.find(item => item.name === id).jaName;
+}
+const linkId = (id) => {
+	return `timetable.html#${id}`
+}
+const calcTime = (hour, minutes, timeRequired) => {
+	const totalMinutes = minutes + timeRequired;
 	const newHour = hour + Math.floor(totalMinutes / 60);
 	const newMinutes = totalMinutes % 60;
 
 	return `${hour}時${minutes}分~${newHour}時${newMinutes}分`;
 };
-const sTableFlame = (id, header, body) => {
+const sTableFlame = (id, user, header, body) => {
 	const timeTable = []
-	const tableBody = [
-		'<tbody>',
-			'<tr>',
-				'<th colspan="2">',
-					id,
-				'</th>',
-			'</tr>',
-			'<tr>',
-				'<th>名前</th>',
-				'<th>時間</th>',
-			'</tr>',
-			'<tr>',
-				'<th>',
-					header,
-				'</th>',
-				'<td>',
-					calcTime(...body),
-				'</td>',
-			'</tr>',
-		'</tbody>']
+	const tableBody = [`<tr>
+		<th><a href="${linkId(id)}">${formatIdName(id)}</a></th>
+		<td><a href="${linkId(id)}">${user}</a></td>
+		<td><a href="${linkId(id)}">${header}</a></td>
+		<td><a href="${linkId(id)}">${calcTime(...body)}</a></td>
+	</tr>`];
 	timeTable.push(...tableBody)
 	return timeTable.join('')
 }
 const getDate = () => {
 	const date = new Date();
-	const month = (date.getMonth() + 1).toString().padStart(2, '0');
-	const day = date.getDate().toString().padStart(2, '0');
-	const hours = date.getHours().toString().padStart(2, '0');
-	const minutes = date.getMinutes().toString().padStart(2, '0');
+	const month = (date.getMonth() + 1);
+	const day = date.getDate();
+	const hours = date.getHours();
+	const minutes = date.getMinutes();
 	return [month, day, hours, minutes]
 }
-const timeData = () => {
+const timeData = (jsonData) => {
 	const timeTable = document.getElementById('time-table')
 	const dateFrame = timeTable.querySelector('h3')
+	let previousDate;
 	const updateDate = () => {
 		const date = getDate()
-		const formattedDate = `現在時刻: ${date[0]}月${date[1]}日${date[2]}時${date[3]}分`;
-		dateFrame.innerHTML = formattedDate;
+		return `現在時刻: ${date[0]}月${date[1]}日${date[2]}時${date[3]}分`;
 	};
-	setInterval(updateDate, 1000);
+	const IntervalCalcDate = () => {
+		const nowDate = updateDate()
+		if (previousDate != nowDate) {
+			dateFrame.innerHTML = nowDate
+			sTable(jsonData)
+			previousDate = nowDate
+		}
+	}
+	sTable(jsonData)
+	setInterval(IntervalCalcDate, 1000);
 }
 const sTable = (json) => {
-	const date = getDate()
-	console.log(date)
+	const dateSample = getDate()
+	const date = [10, 31, dateSample[2], dateSample[3]]
 	const filterData = (category, date, json) => {
 		return json[category].filter((stage) => {
-			const stageTotalMinutes = stage.time.hour * 60 + stage.time.minutes;
-			const desiredTotalMinutes = date[2] * 60 + date[3];
+			const startTime = stage.time.hour * 60 + stage.time.minutes - stage.duration;
+			const endTime = startTime + stage.timeRequired + stage.duration;
+			const nowTime = date[2] * 60 + date[3];
 			return (
 				stage.date.month === date[0] &&
 				stage.date.day === date[1] &&
-				stageTotalMinutes <= desiredTotalMinutes &&
-				stageTotalMinutes + stage.duration >= desiredTotalMinutes
+				startTime <= nowTime &&
+				nowTime < endTime
 			);
 		});
-	}
+	};
 	const filterDatas = [
 		["stage", filterData("stage", date, json)[0]],
-		["ONED", filterData("ONED", date, json)[0]]
+		["ONED", filterData("ONED", date, json)[0]],
+		["DJ", filterData("DJ", date, json)[0]],
+		["smashBros", filterData("smashBros", date, json)[0]]
 	]
-	console.log(filterDatas)
+	const tableData = ['<tbody><tr><th>project</th><td>出演者</td><td>名前</td><th>時間</th></tr>']
 	filterDatas.map((item) => {
-		console.log(item[0])
 		const json = item[1]
-		const docData = document.getElementById(item[0])
-		docData.innerHTML = sTableFlame(item[0], json.title, [json.time.hour, json.time.minutes, json.duration])
+		if (json != undefined) {
+			tableData.push(sTableFlame(item[0], json.performer, json.title, [json.time.hour, json.time.minutes, json.timeRequired]))
+		} else {
+			tableData.push(`<tr><th><a href="${linkId(item[0])}">${formatIdName(item[0])}</a></th><td>演目はありません</td><td></td><td></td></tr>`)
+		}
 	})
+	tableData.push('</tbody>')
+	const tableDocData = document.getElementById('mainTable')
+	tableDocData.innerHTML = tableData.join(' ')
 }
