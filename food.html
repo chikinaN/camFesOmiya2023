@@ -46,27 +46,31 @@
 				</div>
 				
 				<div class="tab-content" id="tab1">
-					<h4>フード一覧</h4>
+					<h4 class="h4span"></h4><span>フード一覧</span></h4>
 					<div class="main">
 						<div class="main_on">
+							<!--モーダルウィンドウテスト用-->
 							<figure>
 								<figcaption>やみたこ</figcaption>
-								<img src="public/img/food/tako.jpg" alt="">
+								<a href="#openModal">
+									<img src="public/img/food/tako.jpg" alt="画像" class="main_img">
+								</a>
 							</figure>
+						</div>
 							<figure>
 								<figcaption>大宮茶会事件</figcaption>
-								<img src="public/img/food/tea1.jpg" alt="">
+								<img src="public/img/food/tea1.jpg" alt="" class="main_img">
 							</figure>
 						</div>
 						<div class="main_on">
 							<figure>
 								<figcaption>きのこたけのこ平和ショップ</figcaption>
-								<img src="public/img/food/takenoko.jpg" alt="">
+								<img src="public/img/food/takenoko.jpg" alt="" class="main_img">
 
 							</figure>
 							<figure>
 								<figcaption>きつねのほこら</figcaption>
-								<img src="public/img/food/cafe_demo.png" alt="">
+								<img src="public/img/food/cafe_demo.png" alt="" class="main_img">
 							</figure>
 						</div>
 					</div>
@@ -87,8 +91,8 @@
 					<p class="tako_title">大宮茶会事件</p>
 					<div class="tea_all">
 						<div>
-							<img src="public/img/food/tea1.jpg" alt="">
-							<img src="public/img/food/tea2.jpg" alt="">
+							<img src="public/img/food/tea1.jpg" alt="" class="main_img">
+							<img src="public/img/food/tea2.jpg" alt="" class="main_img">
 						</div>
 						<div>
 							<p class="tea_text"><span>企画概要</span><br>茶道体験（予約制）&紅茶注ぎ選手権を開催します！</p>
@@ -112,18 +116,15 @@
 					</div>
 				</div>
 				<div class="tab-content" id="tab5"></div>
+				<div id="openModal" class="modal">
+					<div class="modal-content">
+						<p><span>モーダルウィンドウのコンテンツ</span></p>
+						<p>ここにモーダルウィンドウ内のコンテンツを追加します。</p>
+						<a href="#close" title="閉じる" class="close_a">閉じる</a>
+					</div>
+
 			
-				<script>
-					function openTab(tabNumber) {
-						var i, tabContents;
-			
-						tabContents = document.getElementsByClassName("tab-content");
-						for (i = 0; i < tabContents.length; i++) {
-							tabContents[i].classList.remove("active");
-						}
-			
-						document.getElementById("tab" + tabNumber).classList.add("active");
-					}
+				<script src="js/food.js">
 				</script>
 			</section>
 		</article>
