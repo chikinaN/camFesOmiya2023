@@ -13,18 +13,31 @@
 }
 
 .img{
-    width: 100%;
+    height: 80%;
     object-fit: cover;
+    margin: auto;
 }
 
 .card{
-    color: black;
     border: solid 1px #fff;
     text-align: center;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.3);
     width: 25vw;
-    height: 25vh;
+    height: 32vh;
     margin: 10px;
 }
 
-.card {}
+.card p{
+    height: 20%;
+    text-align: center;
+    color: black;
+    background-color: #d9d9d9;
+    display: grid;
+    place-items: center center;
+}
+
+.card p:hover{
+    color: #fff;
+    background-color: #5ab4bd;
+}
+
