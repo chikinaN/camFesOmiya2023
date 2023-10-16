@@ -12,7 +12,7 @@ const fetchTable = async (url) => {
   }
 };
 
-fetchTable('../public/json/timeTable.json')
+fetchTable('public/json/timeTable.json')
   .then(jsonData => {
 		sTable(jsonData)
 		timeData(jsonData)
