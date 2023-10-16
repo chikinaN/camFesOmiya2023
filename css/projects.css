@@ -25,19 +25,19 @@
     width: 25vw;
     height: 32vh;
     margin: 10px;
+    border-radius: 10px 10px 10px 10px;
 }
 
-.card p{
+.card a,.card a:visited{
     height: 20%;
     text-align: center;
-    color: black;
-    background-color: #d9d9d9;
+    color: #e0e0e0;
+    background-color: #19302a;
     display: grid;
     place-items: center center;
+    border-radius: 10px 10px 0 0;
 }
 
-.card p:hover{
-    color: #fff;
-    background-color: #5ab4bd;
+.card a:hover{
+    background-color: #e0e0e0;
 }
-
