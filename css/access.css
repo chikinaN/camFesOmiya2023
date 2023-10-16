@@ -3,7 +3,37 @@
 }
 
 #mamap{
-  padding-left: 12%;
+  margin: 0 auto;
   height: 70vh;
   width: 75vw;
+}
+
+.campusMap{
+  display: flex;
+}
+
+.washi{
+  display: flex;
+  margin: 0 auto;
+  width: calc(var(--width) * var(--img-size));
+  height: calc(var(--height) * var(--img-size));
+  --img-size: 40px;
+  --width: 16;
+  --height: 9;
+}
+
+#map6F{
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .washi {
+    --img-size: 35px;
+    --width: 9;
+    --height: 16;
+    content: url('../public/img/access/washi_lengthWise.jpg');
+  }
+  #map6F{
+    display: block;
+  }
 }
