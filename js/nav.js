@@ -20,8 +20,16 @@ fetchNav('public/json/pagelist.json')
     console.error('An error occurred:', error);
   });
 
+const SearchSection = () => {
+  const sections = document.querySelectorAll('body > article > section');
+  return Array.from(sections).filter(section => {
+    const computedStyle = getComputedStyle(section);
+    const noSideIndexValue = computedStyle.getPropertyValue('--no-side-index').trim();
+    return noSideIndexValue === '0';
+  });
+}
 const searchIdData = () => {
-  const sectionElements = document.querySelectorAll('body > article > section');
+  const sectionElements = SearchSection()
   const result = [];
   sectionElements.forEach(section => {
     const h2Element = section.querySelector('h2');
@@ -47,13 +55,14 @@ const buildCurrentMenu = (length) => {
 const buildLinkMenu = (pageList, currentName) => {
   const navList = ["<ul id='linkMenu'>"]
 	pageList.map((page) => {
+    const pagePath = location.pathname.indexOf('/camFesOmiya2023') == -1? page.path : '/camFesOmiya2023' + page.path
 		const pageLink = currentName == page.name?`
 			<li class='currentLink'>
-				<a href="${page.path}">${page.jaName}</a>
+				<a href="${pagePath}">${page.jaName}</a>
 			</li>`:
       `
 			<li>
-				<a href="${page.path}">${page.jaName}</a>
+				<a href="${pagePath}">${page.jaName}</a>
 			</li>`
 		navList.push(pageLink)
 	})
@@ -101,7 +110,7 @@ const getSectionOffsets = (sections) => {
 
 const article = document.querySelectorAll('body > article')[0]
 const getCurrentSection = () => {
-  const sections = document.querySelectorAll('body > article > section');
+  const sections = SearchSection()
   return findScrollSection(article.scrollTop, getSectionOffsets(sections));
 }
 const setCurrentMenu = (indexNumber) => {
@@ -111,7 +120,7 @@ const setCurrentMenu = (indexNumber) => {
 const setSideIndex = (indexNumber) => {
   const idData = searchIdData();
   const sideIndex = document.getElementById('sideIndex')
-  const sections = document.querySelectorAll('body > article > section');
+  const sections = SearchSection()
   const innerData = []
   for (let i = 0; i < sections.length; i++) {
     const li = `<li ${i ==indexNumber ?"class='current'": ''}><a href=#${idData[i].name}></a></li>`;

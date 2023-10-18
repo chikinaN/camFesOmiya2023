@@ -272,6 +272,7 @@ body article > section {
 	scroll-snap-stop: always;
 
 	--under-color: rgb(96 144 234 / 100%);
+	--no-side-index: 0;
 }
 
 body article > section h2 {

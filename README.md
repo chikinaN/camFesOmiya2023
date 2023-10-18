@@ -2,7 +2,27 @@
 
 ## やり方
 
-更新をしていく予定です(10/11)
+更新をしていく予定です(10/18)
+
+### デプロイ
+
+本番環境はfirebaseで開発環境はgitHubPagesです
+
+#### デプロイ時のフロー（簡易）
+
+1. GitHub Desktop等でのpush
+2. GitHub Pageでの確認
+3. 部門長の承認をもらったら[gitHubAction](https://github.com/chikinaN/camFesOmiya2023/actions/workflows/firebase-hosting-merge.yml)を開き、run workflowを実行
+4. firebaseでのデプロイの確認(任意)
+5. 本番環境を開き確認
+
+#### 各url
+
+本番環境
+[https://camfes-omiya-2023.web.app/](https://camfes-omiya-2023.web.app/)
+
+開発環境
+[https://chikinan.github.io/camFesOmiya2023/](https://chikinan.github.io/camFesOmiya2023/)]
 
 ### 新規ページ
 
@@ -54,6 +74,17 @@
     <h2></h2>
   </section>
 </article>
+```
+
+### サイドの点から外れる方法
+
+以下のような感じでidに`--no-side-index`という変数を割り当てた場合、
+横の丸の適応外になります
+
+```css
+#test {
+  --no-side-index: 1;
+}
 ```
 
 ### ページ変更
