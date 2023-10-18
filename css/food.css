@@ -140,7 +140,7 @@ span{
   color: lightseagreen;
   padding: 10px;
 }
-@media screen and (max-width:428px){
+@media screen and (max-width: 428px){
   .tako_title{
     font-size: 20px;
   }
@@ -175,4 +175,9 @@ span{
 }
 .tako_text{
   padding-left: 10%;
+}
+@media screen and (max-width :428px) {
+  .tea_img_div{
+    display: flex;
+  }
 }
