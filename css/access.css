@@ -24,6 +24,7 @@
 
 #map6F{
   display: none;
+  --no-side-index: 1;
 }
 
 @media screen and (max-width: 600px) {
@@ -35,5 +36,6 @@
   }
   #map6F{
     display: block;
+    --no-side-index: 0;
   }
 }
