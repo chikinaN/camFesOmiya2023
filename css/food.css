@@ -1,10 +1,14 @@
-
+/*タブのcss*/
 .tab-container {
   display: flex;
   width: 80vw;
   margin: 0 auto;
 }
-
+@media screen and (max-width: 428px) {
+  .tab-container {
+    flex-direction: column;
+  }
+}
 .tab {
   flex: 1;
   padding: 10px;
@@ -12,6 +16,12 @@
   cursor: pointer;
   background-color: #19302A;
   border-radius: 10px 10px 0 0;
+}
+@media screen and (max-width: 428px){
+  .tab{
+    border-radius: 10px 10px ;
+    padding: 1px;
+  }
 }
 
 .tab:hover {
@@ -34,50 +44,106 @@
 .tab.active{
   background-color: #ccc;
 }
+/*タブのcssここまで*/
 
 /*@media screen and (max-width: 428px) {
   .クラス名 {}
 }*/
 
+/* aspect-ratio
+縦横どちらかをあらかじめ指定、その後縦横の比率を指定することでスマホ対応。　横/縦の書き方*/
 
+
+/*メインページのcssここから*/
 h4{
   text-align: center;
 }
-img{
+
+.main_on{
+  display: flex;
+  justify-content: space-around;
+}
+@media screen and (max-width: 428px) {
+  .main_on{
+    flex-direction: column;
+  }
+}
+.main_img{
   object-fit: cover;
   width: 30vw;
   height: 30vh;
   border-radius: 10px;
 }
-@media screen and (max-width: 428px) {
-  .img {
-    height: 15vh;
-    width: 30vw;
-    object-fit: cover;
+@media screen and (max-width: 428px){
+  .main_img{
+    width: 70vw;
+    height: 10vh;
   }
 }
-.main_on{
-  display: flex;
-  justify-content: space-around;
+figcaption{
+  font-size: 20px;
 }
-.tako_div{
-  display: flex;
-  padding: 20px;
-  margin-top: 10vh;
-}
-.tako_text{
-  padding-left: 10%;
+@media screen and (max-width: 428px){
+  figcaption{
+    font-size: 10px;
+  }
 }
 span{
   font-weight: bold;
   color: lightseagreen;
   font-size: large;
 }
+
+/*モーダルウィンドウのcssここから*/
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  width: 80vw;
+  height: 80vh;
+}
+
+/* モーダルを表示 */
+.modal:target {
+  display: block;
+}
+
+.modal_img{
+  aspect-ratio: 20/11;
+  width: 70vw;
+  padding-left: 10%;
+}
+@media screen and (max-width: 428px) {
+  .madal_img {
+
+  }
+}
+/*モーダルウィンドウのcssここまで*/
 .tako_title{
   font-size: 30px;
   text-align: center;
   color: lightseagreen;
   padding: 10px;
+}
+@media screen and (max-width:428px){
+  .tako_title{
+    font-size: 20px;
+  }
 }
 .tea_all{
   display: flex;
@@ -96,4 +162,17 @@ span{
   padding: 20px;
   margin-top: 50px;
 }
-
+.tako_div{
+  display: flex;
+  padding: 20px;
+  margin-top: 10vh;
+}
+@media screen and (max-width:428px){
+  .tako_div{
+    flex-direction: column;
+    margin-top: 1vh;
+  }
+}
+.tako_text{
+  padding-left: 10%;
+}
