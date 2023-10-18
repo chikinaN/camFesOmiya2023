@@ -17,7 +17,7 @@
   margin: 0 auto;
   width: calc(var(--width) * var(--img-size));
   height: calc(var(--height) * var(--img-size));
-  --img-size: 40px;
+  --img-size: 65px;
   --width: 16;
   --height: 9;
 }
