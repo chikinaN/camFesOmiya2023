@@ -1,0 +1,38 @@
+h3{
+    font-size: 25px;
+    line-height: 55px;
+    text-decoration: underline;
+    text-decoration-color: aqua;
+    padding: 10px
+}
+
+p{
+    font-size: 30px;
+    padding: 5px;
+    margin-right: 20px;
+}
+
+.smashBrosImg{
+    height: 65%;
+    margin: 15px 60px 0 70px;
+}
+
+.oracleImg{
+    height: 60%;
+    margin: 20px 60px 0 60px;
+}
+
+.scrunchieImg{
+    height: 65%;
+    margin: 15px 60px 0 70px;
+}
+
+.DJImg{
+    height: 50%;
+    margin: 35px 60px 0 60px;
+}
+
+.ONEDImg{
+    height: 50%;
+    margin: 90px 40px 0 40px;
+}
