@@ -121,12 +121,14 @@ const setSideIndex = (indexNumber) => {
   const idData = searchIdData();
   const sideIndex = document.getElementById('sideIndex')
   const sections = SearchSection()
-  const innerData = []
-  for (let i = 0; i < sections.length; i++) {
-    const li = `<li ${i ==indexNumber ?"class='current'": ''}><a href=#${idData[i].name}></a></li>`;
-    innerData.push(li)
+  if (sections.length != 1) {
+    const innerData = []
+    for (let i = 0; i < sections.length; i++) {
+      const li = `<li ${i ==indexNumber ?"class='current'": ''}><a href=#${idData[i].name}></a></li>`;
+      innerData.push(li)
+    }
+    sideIndex.innerHTML = innerData.join(' ')
   }
-  sideIndex.innerHTML = innerData.join(' ')
 }
 setSideIndex(0)
 let lastSectionNumber = 0
