@@ -7,6 +7,12 @@
     flex-flow: row wrap;
     justify-content: center;
 }
+
+@media screen and (max-width: 428px) {
+    .container {
+        margin: 0 5px;
+    }
+  }
 *{
     margin: 0;
     padding: 0;
@@ -18,6 +24,12 @@
     margin: auto;
 }
 
+@media screen and (max-width: 428px) {
+    .img {
+        height: 70%;
+    }
+  }
+
 .card{
     border: solid 1px #fff;
     text-align: center;
@@ -28,6 +40,13 @@
     border-radius: 10px 10px 10px 10px;
 }
 
+@media screen and (max-width: 428px) {
+    .card {
+        width: 40vw;
+        height: 30vw;
+    }
+  }
+
 .card a,.card a:visited{
     height: 20%;
     text-align: center;
@@ -37,6 +56,13 @@
     place-items: center center;
     border-radius: 10px 10px 0 0;
 }
+
+@media screen and (max-width: 428px) {
+    .card a,.card a:visited {
+        height: 30%;
+        font-size: 10px;
+    }
+  }
 
 .card a:hover{
     background-color: #e0e0e0;
