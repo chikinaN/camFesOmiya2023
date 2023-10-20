@@ -1,0 +1,139 @@
+
+
+.supplement{
+  background-color: var(--back-g-color);
+  position: fixed;
+  top: var(--supplement-top);
+  bottom: var(--supplement-bottom);
+  left: var(--supplement-left);
+  right: var(--supplement-right);
+  height: var(--supplement-height);
+  width: var(--supplement-width);
+  pointer-events: none;
+  --back-g-color: rgba(0, 0, 0, 0.9);
+  --supplement-top: 0;
+  --supplement-bottom: 0;
+  --supplement-left: 0;
+  --supplement-right: 0;
+  --supplement-height: 200px;
+  --supplement-width: 500px;
+}
+
+#tttest p{
+  display: none;
+}
+
+
+
+#tttest area#JapaneseGames0:hover ~ #JapaneseGames1,
+#tttest area#stage0:hover ~ #stage1,
+#tttest area#food0:hover ~ #food1,
+#tttest area#smashBros0:hover ~ #smashBros1,
+#tttest area#scrunchie0:hover ~ #scrunchie1,
+#tttest area#oracle0:hover ~ #oracle1,
+#tttest area#about0:hover ~ #about1,
+#tttest area#ONED0:hover ~ #ONED1,
+#tttest area#DJ0:hover ~ #DJ1 {
+  display: block;
+}
+
+#JapaneseGames1{
+  --back-g-color: rgba(105, 54, 54, 0.9);
+  --supplement-top: 20%;
+  --supplement-bottom: 0;
+  --supplement-left: 16%;
+  --supplement-right: 0;
+  --supplement-height: 200px;
+  --supplement-width: 500px;
+}
+
+#stage1{
+  --back-g-color: rgba(54, 68, 105, 0.9);
+  --supplement-top: 20%;
+  --supplement-bottom: 0;
+  --supplement-left: 16%;
+  --supplement-right: 0;
+  --supplement-height: 200px;
+  --supplement-width: 500px;
+}
+
+#food1{
+  --back-g-color: rgba(54, 105, 67, 0.9);
+  --supplement-top: 20%;
+  --supplement-bottom: 0;
+  --supplement-left: 16%;
+  --supplement-right: 0;
+  --supplement-height: 200px;
+  --supplement-width: 500px;
+}
+
+#smashBros1{
+  --back-g-color: rgba(105, 54, 66, 0.9);
+  --supplement-top: 30%;
+  --supplement-bottom: 0;
+  --supplement-left: 16%;
+  --supplement-right: 0;
+  --supplement-height: 200px;
+  --supplement-width: 500px;
+}
+
+#scrunchie1{
+  --back-g-color: rgba(102, 54, 105, 0.9);
+  --supplement-top: 40%;
+  --supplement-bottom: 0;
+  --supplement-left: 16%;
+  --supplement-right: 0;
+  --supplement-height: 200px;
+  --supplement-width: 500px;
+}
+
+#oracle1{
+  --back-g-color: rgba(105, 54, 54, 0.9);
+  --supplement-top: 30%;
+  --supplement-bottom: 0;
+  --supplement-left: 16%;
+  --supplement-right: 0;
+  --supplement-height: 200px;
+  --supplement-width: 500px;
+}
+
+#about1{
+  --back-g-color: rgba(54, 105, 61, 0.9);
+  --supplement-top: 35%;
+  --supplement-bottom: 0;
+  --supplement-left: 16%;
+  --supplement-right: 0;
+  --supplement-height: 200px;
+  --supplement-width: 500px;
+}
+
+#ONED1{
+  --back-g-color: rgba(54, 99, 105, 0.9);
+  --supplement-top: 20%;
+  --supplement-bottom: 0;
+  --supplement-left: 50%;
+  --supplement-right: 0;
+  --supplement-height: 200px;
+  --supplement-width: 500px;
+}
+
+#DJ1{
+  --back-g-color: rgba(102, 54, 105, 0.9);
+  --supplement-top: 40%;
+  --supplement-bottom: 0;
+  --supplement-left: 50%;
+  --supplement-right: 0;
+  --supplement-height: 200px;
+  --supplement-width: 500px;
+}
+
+
+/* {
+  --back-g-color: rgba(0, 0, 0, 0.9);
+  --supplement-top: 0;
+  --supplement-bottom: 0;
+  --supplement-left: 0;
+  --supplement-right: 0;
+  --supplement-height: px;
+  --supplement-width: px;
+} */
