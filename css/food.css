@@ -1,4 +1,4 @@
-@media screen and (max-width:428px){
+@media screen and (max-width:600px){
   
 }
 /*タブのcss*/
@@ -7,7 +7,7 @@
   width: 80vw;
   margin: 0 auto;
 }
-@media screen and (max-width: 428px) {
+@media screen and (max-width: 600px) {
   .tab-container {
     flex-direction: column;
   }
@@ -20,7 +20,7 @@
   background-color: #19302A;
   border-radius: 10px 10px 0 0;
 }
-@media screen and (max-width: 428px){
+@media screen and (max-width: 600px){
   .tab{
     border-radius: 10px 10px ;
     padding: 1px;
@@ -66,7 +66,7 @@ h4{
   display: flex;
   justify-content: space-around;
 }
-@media screen and (max-width: 428px) {
+@media screen and (max-width: 600px) {
   .main_on{
     flex-direction: column;
   }
@@ -77,7 +77,7 @@ h4{
   height: 30vh;
   border-radius: 10px;
 }
-@media screen and (max-width: 428px){
+@media screen and (max-width: 600px){
   .main_img{
     width: 70vw;
     height: 10vh;
@@ -86,7 +86,7 @@ h4{
 figcaption{
   font-size: 20px;
 }
-@media screen and (max-width: 428px){
+@media screen and (max-width: 600px){
   figcaption{
     font-size: 10px;
   }
@@ -96,7 +96,7 @@ span{
   color: lightseagreen;
   font-size: large;
 }
-@media screen and (max-width:428px){
+@media screen and (max-width:600px){
   span{
     font-size: small;
     font-weight: normal;
@@ -135,7 +135,9 @@ span{
 .modal_img{
   aspect-ratio: 20/11;
   width: 70vw;
+  max-height:75vh ;
   padding-left: 10%;
+  object-fit: cover;
 }
 
 /*モーダルウィンドウのcssここまで*/
@@ -145,7 +147,7 @@ span{
   color: lightseagreen;
   padding: 10px;
 }
-@media screen and (max-width: 428px){
+@media screen and (max-width: 600px){
   .tako_title{
     font-size: 20px;
   }
@@ -153,7 +155,7 @@ span{
 .tea_all{
   display: flex;
 }
-@media screen and (max-width: 428px){
+@media screen and (max-width: 600px){
   .tea_all{
     flex-direction: column
   }
@@ -164,7 +166,7 @@ span{
   padding-top: 10vh;
 }
 
-@media screen and (max-width: 428px){
+@media screen and (max-width: 600px){
   .tea_text{
     padding-top: none;
     padding: 10px;
@@ -174,7 +176,7 @@ span{
   padding: 20px;
   font-size: 17px;
 }
-@media screen and (max-width: 428px){
+@media screen and (max-width: 600px){
   .takenoko_text{
     font-size: 12px;
   }
@@ -185,7 +187,7 @@ span{
   padding: 20px;
   margin-top: 50px;
 }
-@media screen and (max-width: 428px){
+@media screen and (max-width: 600px){
   .takenoko_all{
     flex-direction: column-reverse;
     padding-top: 0;
@@ -197,7 +199,7 @@ span{
   padding: 20px;
   margin-top: 10vh;
 }
-@media screen and (max-width:428px){
+@media screen and (max-width:600px){
   .tako_div{
     flex-direction: column;
     margin-top: 1vh;
@@ -206,12 +208,12 @@ span{
 .tako_text{
   padding-left: 10%;
 }
-@media screen and (max-width:428px) {
+@media screen and (max-width:600px) {
   .tako_text{
     padding-left: 0;
   }
 }
-@media screen and (max-width :428px) {
+@media screen and (max-width :600px) {
   .tea_img_div{
     display: flex;
   }
@@ -222,7 +224,7 @@ span{
   margin-top: 10vh;
   padding: 20px;
 }
-@media screen and (max-width: 428px){
+@media screen and (max-width: 600px){
   .fox_all{
     flex-direction: column;
     margin-top: 0;
@@ -233,7 +235,7 @@ span{
   padding-left: 30px;
   padding-top: 20px;
 }
-@media screen and (max-width:428px){
+@media screen and (max-width:600px){
   .fox_text{
     padding-left: 0;
     font-size: 15px;
