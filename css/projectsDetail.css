@@ -130,3 +130,10 @@ p{
     background-color: #5ab4bd;
     color: #fff;
   }
+
+.back_p{
+  font-size: 20px;
+}
+a:hover{
+  color: black;
+}

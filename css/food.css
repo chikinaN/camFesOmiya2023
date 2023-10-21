@@ -26,7 +26,9 @@
     padding: 1px;
   }
 }
-
+figure{
+  overflow: hidden;
+}
 .tab:hover {
   background-color: #e0e0e0;
 }
@@ -76,6 +78,13 @@ h4{
   width: 30vw;
   height: 30vh;
   border-radius: 10px;
+  transition: 6.0s;
+}
+.main_img:hover{
+  width: 50vw;
+  height: 50vh;
+  transition: 2.0s;
+  transform: scale(2) rotate(1080deg);
 }
 @media screen and (max-width: 600px){
   .main_img{
@@ -140,6 +149,7 @@ span{
   object-fit: cover;
 }
 
+
 /*モーダルウィンドウのcssここまで*/
 .tako_title{
   font-size: 30px;
@@ -174,11 +184,13 @@ span{
 }
 .takenoko_text{
   padding: 20px;
-  font-size: 17px;
+  font-size: 15px;
 }
 @media screen and (max-width: 600px){
   .takenoko_text{
     font-size: 12px;
+    padding-top: 0;
+    padding: 10px;
   }
 }
 
@@ -199,7 +211,7 @@ span{
   padding: 20px;
   margin-top: 10vh;
 }
-@media screen and (max-width:600px){
+@media screen and (max-width:600px){v
   .tako_div{
     flex-direction: column;
     margin-top: 1vh;
