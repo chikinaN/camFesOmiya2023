@@ -3,12 +3,16 @@
 .supplement{
   background-color: var(--back-g-color);
   position: fixed;
+  padding-top: var(--supplement-padding-top);
+  padding-left: var(--supplement-padding-left);
   top: var(--supplement-top);
   bottom: var(--supplement-bottom);
   left: var(--supplement-left);
   right: var(--supplement-right);
   height: var(--supplement-height);
   width: var(--supplement-width);
+  font-size: var(--supplement-font-size);
+  box-sizing: border-box;
   pointer-events: none;
   --back-g-color: rgba(0, 0, 0, 0.9);
   --supplement-top: 0;
@@ -17,7 +21,12 @@
   --supplement-right: 0;
   --supplement-height: 200px;
   --supplement-width: 500px;
+  --supplement-padding-top: 1%;
+  --supplement-padding-left: 1%;
+  --supplement-font-size: 1em;
+  border-radius: 50px;
 }
+
 
 #tttest p{
   display: none;
@@ -43,7 +52,7 @@
   --supplement-bottom: 0;
   --supplement-left: 16%;
   --supplement-right: 0;
-  --supplement-height: 200px;
+  --supplement-height: 320px;
   --supplement-width: 500px;
 }
 
@@ -63,7 +72,7 @@
   --supplement-bottom: 0;
   --supplement-left: 16%;
   --supplement-right: 0;
-  --supplement-height: 200px;
+  --supplement-height: 270px;
   --supplement-width: 500px;
 }
 
@@ -83,7 +92,7 @@
   --supplement-bottom: 0;
   --supplement-left: 16%;
   --supplement-right: 0;
-  --supplement-height: 200px;
+  --supplement-height: 300px;
   --supplement-width: 500px;
 }
 
@@ -115,6 +124,7 @@
   --supplement-right: 0;
   --supplement-height: 200px;
   --supplement-width: 500px;
+  --supplement-font-size: 0.9em;
 }
 
 #DJ1{
@@ -123,7 +133,7 @@
   --supplement-bottom: 0;
   --supplement-left: 50%;
   --supplement-right: 0;
-  --supplement-height: 200px;
+  --supplement-height: 220px;
   --supplement-width: 500px;
 }
 
