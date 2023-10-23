@@ -9,15 +9,14 @@
 @media screen and (max-width: 600px) {
     .smashBros h3,.oracle h3,.scrunchie h3,.DJ h3,.ONED h3{
         font-size: 20px;
-        padding: 5px;
+        padding: 10px;
         text-align: center;
-        padding: 5px;
     }
   }
 
 @media screen and (max-width: 600px) {
     h2{
-        font-size: 25px;
+        font-size: 20px;
     }
   }
 
@@ -30,8 +29,7 @@
 @media screen and (max-width: 600px) {
     .smashBros p,.oracle p,.scrunchie p,.DJ p,.ONED p{
         font-size: 15px;
-        padding: 0;
-        margin: 0 10px;
+        margin: 0 20px;
     }
   }
 
@@ -40,15 +38,6 @@
     height: 65%;
     margin: 15px 60px 0 70px;
 }
-
-@media screen and (max-width: 600px) {
-    .smashBrosImg {
-        float: none;
-        text-align: center;
-        height: 40%;
-        margin: auto;
-    }
-  }
 
 .oracleImg{
     height: 60%;
@@ -70,12 +59,33 @@
     margin: 90px 40px 0 40px;
 }
 
+@media screen and (max-width: 600px) {
+  .smashBrosImg,.oracleImg,.scrunchieImg,.DJImg,.ONEDImg {
+    float: none;
+    text-align: center;
+    height: auto;
+    width: 80%;
+    margin: auto;
+    order: -1;
+  }
+}
+
 .tab_content_description h3{
-    margin-top: 15px;
     font-size: 28px;
     text-decoration: underline;
     text-decoration-color: aqua;
     padding: 10px;
+    text-align: center;
+    margin-top: -20px;
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 600px) {
+  .tab_content_description h3{
+    padding: 0;
+    font-size: 20px;
+    margin-top: -30px;
+  }
 }
 
 .tab_content_description h4{
@@ -87,15 +97,41 @@
     margin-top: 5px;
 }
 
+@media screen and (max-width: 600px) {
+  .tab_content_description h4 {
+    font-size: 15px;
+    line-height: normal;
+    padding: 0;
+    margin-top: 0;
+    text-align: center;
+  }
+}
+
 .tab_content_description p{
     font-size: 25px;
 }
 
+@media screen and (max-width: 600px) {
+  .tab_content_description p {
+    font-size: 15px;
+  }
+}
+
 .fukuwaraiImg{
     float: left;
-    width: 30%;
+    width: 25%;
     margin: 0 40px 0 0;
     padding: 0 10px 30px 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .fukuwaraiImg {
+    float: none;
+    width: 40%;
+    text-align: center;
+    margin: auto;
+    padding: 0;
+  }
 }
 
 .karutaImg{
@@ -108,8 +144,15 @@
 .hanetukiImg{
     float: left;
     width: 30%;
-    margin: 0 20px 0 0;
+    margin: 0 10px 0 10px;
     padding: 0 10px 30px 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .fukuwaraiImg,.karutaImg,.hanetukiImg {
+    float: none;
+    flex-direction: column-reverse;
+  }
 }
 
 /*タブ切り替え全体のスタイル*/
@@ -146,6 +189,12 @@
     border-radius: 15px 15px 0 0;
     border: 1px solid #e0e0e0;
     width: 95%;
+  }
+
+  @media screen and (max-width: 600px) {
+    .tab_content {
+      width: 80%;
+    }
   }
   
   /*ラジオボタンを全て消す*/
