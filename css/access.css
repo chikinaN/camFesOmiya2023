@@ -1,5 +1,5 @@
-#maps{
-
+img{
+  user-select: none;
 }
 
 #mamap{
@@ -90,31 +90,13 @@
   }
 }
 
-.supplement{
-  background-color: var(--back-g-color);
-  position: fixed;
-  top: var(--supplement-top);
-  bottom: var(--supplement-bottom);
-  left: var(--supplement-left);
-  right: var(--supplement-right);
-  height: var(--supplement-height);
-  width: var(--supplement-width);
+
+.testclick{
+  display: inline;
+  color: rgb(200, 200, 200);
+  font-size: 0.75em;
 }
 
-#tttest p{
-  display: none;
-}
-
-#JapaneseGames0 area:hover + #JapaneseGames1{
-  display: block;
-}
-
-#JapaneseGames1{
-  --back-g-color: red;
-  --supplement-top: 20%;
-  --supplement-bottom: 0;
-  --supplement-left: 20%;
-  --supplement-right: 0;
-  --supplement-height: 500px;
-  --supplement-width: 500px;
+.EndSentence{
+  padding-bottom: 0.75em;
 }
