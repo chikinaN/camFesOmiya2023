@@ -1,13 +1,13 @@
-h3{
+.smashBros h3,.oracle h3,.scrunchie h3,.DJ h3,.ONED h3{
     font-size: 25px;
-    line-height: 55px;
+    line-height: 40px;
     text-decoration: underline;
     text-decoration-color: aqua;
     padding: 10px
 }
 
 @media screen and (max-width: 600px) {
-    h3{
+    .smashBros h3,.oracle h3,.scrunchie h3,.DJ h3,.ONED h3{
         font-size: 20px;
         padding: 5px;
         text-align: center;
@@ -21,14 +21,14 @@ h3{
     }
   }
 
-p{
+.smashBros p,.oracle p,.scrunchie p,.DJ p,.ONED p{
     font-size: 30px;
     padding: 5px;
     margin-right: 20px;
 }
 
 @media screen and (max-width: 600px) {
-    p{
+    .smashBros p,.oracle p,.scrunchie p,.DJ p,.ONED p{
         font-size: 15px;
         padding: 0;
         margin: 0 10px;
@@ -55,11 +55,6 @@ p{
     margin: 20px 60px 0 60px;
 }
 
-.JapaneseGamesImg{
-    height: 65%;
-    margin: 15px 40px 0 40px;
-}
-
 .scrunchieImg{
     height: 65%;
     margin: 15px 60px 0 70px;
@@ -75,33 +70,82 @@ p{
     margin: 90px 40px 0 40px;
 }
 
+.tab_content_description h3{
+    margin-top: 15px;
+    font-size: 28px;
+    text-decoration: underline;
+    text-decoration-color: aqua;
+    padding: 10px;
+}
+
+.tab_content_description h4{
+    font-size: 20px;
+    line-height: 30px;
+    text-decoration: underline;
+    text-decoration-color: antiquewhite;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+.tab_content_description p{
+    font-size: 25px;
+}
+
+.fukuwaraiImg{
+    float: left;
+    width: 30%;
+    margin: 0 40px 0 0;
+    padding: 0 10px 30px 10px;
+}
+
+.karutaImg{
+    float: left;
+    width: 40%;
+    margin: 0 10px 0 20px;
+    padding: 0 10px 30px 20px;
+}
+
+.hanetukiImg{
+    float: left;
+    width: 30%;
+    margin: 0 20px 0 0;
+    padding: 0 10px 30px 20px;
+}
+
 /*タブ切り替え全体のスタイル*/
 .tabs {
-    margin-top: 50px;
-    padding-bottom: 40px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    width: 700px;
-    margin: 0 auto;}
+    width: 90%;
+    margin: 0 auto;
+}
   
   /*タブのスタイル*/
   .tab_item {
-    width: calc(100%/3);
     height: 50px;
-    border-bottom: 3px solid #5ab4bd;
-    background-color: #d9d9d9;
+    width: 29vw;
+    background-color: #19302a;
     line-height: 50px;
     font-size: 16px;
     text-align: center;
-    color: #565656;
     display: block;
     float: left;
-    text-align: center;
     font-weight: bold;
-    transition: all 0.2s ease;
+    border-radius: 20px 20px 0 0;
   }
+
+  /*タブを中央よせ*/
+  .center{
+    margin-left: 2.5vw;
+  }
+  
   .tab_item:hover {
-    opacity: 0.75;
+    background-color: #e0e0e0;
+  }
+
+  .tab_content{
+    background-color:rgba(255, 255, 255, 0.3);
+    border-radius: 15px 15px 0 0;
+    border: 1px solid #e0e0e0;
+    width: 95%;
   }
   
   /*ラジオボタンを全て消す*/
@@ -117,16 +161,9 @@ p{
     overflow: hidden;
   }
   
-  
   /*選択されているタブのコンテンツのみを表示*/
   #all:checked ~ #all_content,
   #programming:checked ~ #programming_content,
   #design:checked ~ #design_content {
     display: block;
-  }
-  
-  /*選択されているタブのスタイルを変える*/
-  .tabs input:checked + .tab_item {
-    background-color: #5ab4bd;
-    color: #fff;
   }
