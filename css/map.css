@@ -73,7 +73,7 @@
 
 #stage1{
   --back-g-color: rgba(54, 68, 105, 0.85);
-  --supplement-height: 300px;
+  --supplement-height: 120px;
   --supplement-width: 300px;
   --supplement-border-color: rgb(114, 158, 247);
 }
