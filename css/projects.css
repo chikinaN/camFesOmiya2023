@@ -1,5 +1,4 @@
 .container{
-    margin: 0 50px;
     display:flex;
     text-align: center;
     box-sizing: border-box;
@@ -8,11 +7,6 @@
     justify-content: center;
 }
 
-@media screen and (max-width: 600x) {
-    .container {
-        margin: 0 5px;
-    }
-  }
 *{
     margin: 0;
     padding: 0;
