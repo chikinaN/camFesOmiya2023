@@ -81,7 +81,7 @@ const navList = (pageList) => {
   const path = formatPathname(location.pathname);
   const currentData = pageList.filter((data) => data.path == path)[0]
   const h3Title = '<h3>キャンフェス<br>〜京都〜<br>In大宮</h3>'
-  const icon = '<img src="public/img/camfes2023_logo_min.png" alt="icon" id="icon">'
+  const icon = '<img src="public/img/camfes2023_logo.jpg" alt="icon" id="icon">'
   const menuTitle = "<header id='menuTitle'>" + h3Title + icon + '</header>'
   const currentMenu = "<ul id='currentMenu'>" + buildCurrentMenu(0) + '</ul>'
 	const menu = document.getElementById("nav-list");
