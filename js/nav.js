@@ -148,3 +148,15 @@ menu.addEventListener('click', function(event) {
     document.getElementById('nav-menu').checked = false;
   }
 });
+// ,{
+//   "id": 2,
+//   "name": "timeTable",
+//   "jaName": "タイムテーブル",
+//   "path": "/timetable.html"
+// }
+// ,{
+//   "id" : 6,
+//   "name": "about",
+//   "jaName" : "キャンフェスとは",
+//   "path" : "/about.html"
+// }
