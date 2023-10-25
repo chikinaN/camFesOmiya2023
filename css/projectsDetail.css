@@ -9,7 +9,7 @@
 @media screen and (max-width: 600px) {
     .smashBros h3,.oracle h3,.scrunchie h3,.DJ h3,.ONED h3{
         font-size: 20px;
-        padding: 10px;
+        padding: 5px;
         text-align: center;
     }
   }
@@ -22,7 +22,7 @@
 
 .smashBros p,.oracle p,.scrunchie p,.DJ p,.ONED p{
     font-size: 30px;
-    padding: 5px;
+    padding: 3px;
     margin-right: 20px;
 }
 
@@ -60,7 +60,18 @@
 }
 
 @media screen and (max-width: 600px) {
-  .smashBrosImg,.oracleImg,.scrunchieImg,.DJImg,.ONEDImg {
+  .smashBrosImg,.scrunchieImg {
+    float: none;
+    text-align: center;
+    height: auto;
+    width: 70%;
+    margin: auto;
+    order: -1;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .oracleImg,.DJImg,.ONEDImg {
     float: none;
     text-align: center;
     height: auto;
