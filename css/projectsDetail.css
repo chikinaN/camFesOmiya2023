@@ -6,17 +6,27 @@
     padding: 10px
 }
 
+/*pcとスマホで見出しの表示を変更*/
+.pc{
+  display: block !important;
+}
+.sp{
+  display: none !important;
+}
+
+@media screen and (max-width: 428px) {
+  .pc {display: none !important;
+  }
+  .sp{display: block !important;
+      font-size: 18px;
+  }
+}
+
 @media screen and (max-width: 600px) {
     .smashBros h3,.oracle h3,.scrunchie h3,.DJ h3,.ONED h3{
         font-size: 20px;
         padding: 5px;
         text-align: center;
-    }
-  }
-
-@media screen and (max-width: 600px) {
-    h2{
-        font-size: 20px;
     }
   }
 
@@ -40,21 +50,25 @@
 }
 
 .oracleImg{
+  float: left;
     height: 60%;
     margin: 20px 60px 0 60px;
 }
 
 .scrunchieImg{
+    float: left;
     height: 65%;
     margin: 15px 60px 0 70px;
 }
 
 .DJImg{
+    float: left;
     height: 50%;
     margin: 35px 60px 0 60px;
 }
 
 .ONEDImg{
+   float: left;
     height: 50%;
     margin: 90px 40px 0 40px;
 }
@@ -66,7 +80,7 @@
     height: auto;
     width: 70%;
     margin: auto;
-    order: -1;
+    margin-top: -25px;
   }
 }
 
@@ -77,7 +91,7 @@
     height: auto;
     width: 80%;
     margin: auto;
-    order: -1;
+    margin-top: -20px;
   }
 }
 
@@ -87,7 +101,7 @@
     text-decoration-color: aqua;
     padding: 10px;
     text-align: center;
-    margin-top: -20px;
+    margin-top: -10px;
     margin-bottom: 15px;
 }
 
@@ -95,7 +109,7 @@
   .tab_content_description h3{
     padding: 0;
     font-size: 20px;
-    margin-top: -30px;
+    margin-top: -10px;
   }
 }
 
@@ -164,6 +178,7 @@
     float: none;
     text-align: center;
     margin: 0 auto;
+    padding: 10px;
   }
 }
 
@@ -177,6 +192,12 @@
 .tabs {
     width: 90%;
     margin: 0 auto;
+}
+
+@media screen and (max-width: 428px) {
+  .tabs {
+    margin-top: -35px;
+  }
 }
   
   /*タブのスタイル*/
@@ -206,12 +227,12 @@
     background-color:rgba(255, 255, 255, 0.3);
     border-radius: 15px 15px 0 0;
     border: 1px solid #e0e0e0;
-    width: 95%;
+    width: 98%;
   }
 
   @media screen and (max-width: 600px) {
     .tab_content {
-      width: 80%;
+      width: 90%;
     }
   }
   
@@ -223,7 +244,7 @@
   /*タブ切り替えの中身のスタイル*/
   .tab_content {
     display: none;
-    padding: 40px 40px 0;
+    padding: 20px 20px 0;
     clear: both;
     overflow: hidden;
   }
