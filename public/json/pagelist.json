@@ -5,11 +5,6 @@
 		"jaName": "メインページ",
 		"path": "/"
 	},{
-		"id": 2,
-		"name": "timeTable",
-		"jaName": "タイムテーブル",
-		"path": "/timetable.html"
-	},{
 		"id": 3,
 		"name": "projects",
 		"jaName": "企画一覧",
@@ -24,10 +19,5 @@
 		"name": "food",
 		"jaName" : "フード",
 		"path" : "/food.html"
-	},{
-		"id" : 6,
-		"name": "about",
-		"jaName" : "キャンフェスとは",
-		"path" : "/about.html"
 	}
 ]
