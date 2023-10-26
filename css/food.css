@@ -132,8 +132,7 @@ figcaption{
   }
 }
 span{
-  font-weight: bold;
-  color: lightseagreen;
+  color:lightcoral;
   font-size: large;
 }
 @media screen and (max-width:600px){
@@ -331,4 +330,14 @@ ul{
 }
 .about_ul{
   list-style: disc;
+}
+.fox_caffe_p{
+  font-size: 20px;
+  padding-top: 5vh;
+  text-align: center;
+}
+.about_div_under{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10vh;
 }
