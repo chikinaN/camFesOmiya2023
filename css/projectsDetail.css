@@ -3,7 +3,7 @@
     line-height: 40px;
     text-decoration: underline;
     text-decoration-color: aqua;
-    padding: 10px
+    padding: 10px;
 }
 
 /*pcとスマホで見出しの表示を変更*/
@@ -70,7 +70,7 @@
 .ONEDImg{
    float: left;
     height: 50%;
-    margin: 90px 40px 0 40px;
+    margin: 90px 60px 0 40px;
 }
 
 @media screen and (max-width: 600px) {
@@ -259,6 +259,7 @@
   /*ONEDのタイムテーブル*/
   .guidance{
     text-align: center;
+    margin-top: 30px;
   }
 
   th,td{
@@ -305,14 +306,14 @@
   text-align: center;
 }
 
+.DJ_file{
+  width: 35%;
+  margin: 30px auto;
+}
+
 .DJsp{
   display: none;
   margin-top: 30%;
-}
-
-.DJ_file{
-  width: 35%;
-  margin: 20px auto;
 }
 
 /*pcとスマホでページ数変更*/
