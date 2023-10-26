@@ -1,15 +1,19 @@
 const cardElements = document.getElementsByClassName('card');
 const initializeElements = [];
 Array.from(cardElements).forEach(cardElement => {
-  const asideParagraph = cardElement.querySelector('aside > p');
-  initializeElements.push(asideParagraph.innerHTML);
+  const asideParagraph = cardElement.querySelectorAll('aside > p');
+  const initializeData = []
+  Array.from(asideParagraph).forEach(asideData => {
+    initializeData.push(asideData.innerHTML);
+  })
+  initializeElements.push(initializeData)
 });
 const formatUnderLine = () => {
   const cardElements = document.getElementsByClassName('card');
   for (let i = 0; i < cardElements.length; i++) {
     const card = cardElements[i];
     const cardTexts = card.querySelectorAll('aside > p')
-    Array.from(cardTexts).forEach(cardText => {
+    Array.from(cardTexts).forEach((cardText, index) => {
       const fontSize = parseInt(window.getComputedStyle(cardText).getPropertyValue('font-size'));
       const textLength = Math.floor(cardText.offsetWidth / fontSize);
       function formatText(initializeText) {
@@ -43,7 +47,7 @@ const formatUnderLine = () => {
         }
         return resultArray;
       };
-      const formattedArray = formatCardText(formatText(initializeElements[i]), textLength);
+      const formattedArray = formatCardText(formatText(initializeElements[i][index]), textLength);
       cardText.innerHTML = formattedArray.map(item => `<span>${item}</span>`).join(' ');
     })
   }
