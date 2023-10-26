@@ -298,3 +298,37 @@ span{
 body article > section#food > h2{
   margin-bottom: 60px;
 }
+/*詳細ページcssここから*/
+
+#Allergie{
+  width: 85vw;
+  height: 75vh;
+  border:#ccc 2px;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  overflow: scroll;
+}
+.about_title{
+  font-size: 30px;
+  text-align: center;
+  padding-top: 5vh;
+}
+.about_text{
+  text-align: center;
+  font-size: 20px;
+  padding-top: 4vh;
+}
+.about_div{
+  display: flex;
+  justify-content: space-around;
+}
+li{
+  font-size: 20px;
+}
+ul{
+  list-style: disc;
+  padding-top: 5vh;
+}
+.about_ul{
+  list-style: disc;
+}
