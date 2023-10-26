@@ -17,7 +17,7 @@
 @media screen and (max-width: 428px) {
   .pc {display: none !important;
   }
-  .sp{display: block !important;
+  .sp {display: block !important;
       font-size: 18px;
   }
 }
@@ -255,3 +255,68 @@
   #design:checked ~ #design_content {
     display: block;
   }
+
+  /*ONEDのタイムテーブル*/
+  .guidance{
+    text-align: center;
+  }
+
+  th,td{
+    text-align: center;
+    border: solid 1px;
+    height: 80px;
+  }
+
+  .content{
+    width: 400px;
+  }
+
+  .time,.presenter{
+    width: 150px;
+  }
+
+  table{
+    border-collapse: collapse;
+    width: 550px;
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width: 428px) {
+    th,td{
+      height: 60px;
+    }
+    .content {
+      width: 190px;
+    }
+    .time{
+      width: 60px;
+    }
+    .presenter{
+      width: 90px;
+    }
+    table{
+      width: 340px;
+    }
+  }
+
+/*DJのタイムテーブル*/
+.DJ_timetable{
+  display: flex;
+  text-align: center;
+}
+
+.DJsp{
+  display: none;
+  margin-top: 30%;
+}
+
+.DJ_file{
+  width: 35%;
+  margin: 20px auto;
+}
+
+/*pcとスマホでページ数変更*/
+@media screen and (max-width: 428px) {
+  .DJpc {display: none;}
+  .DJsp {display: block;}
+}
