@@ -114,8 +114,8 @@ const sTable = (json) => {
 		if (json != undefined) {
 			tableData.push(sTableFlame(item[0], json.performer, json.title, [json.time.hour, json.time.minutes, json.timeRequired]))
 		} else {
-			// tableData.push(`<tr><th><a href="${linkId(item[0])}">${formatIdName(item[0])}</a></th><td>演目はありません</td><td></td><td></td></tr>`)
-			tableData.push(`<tr><th>${formatIdName(item[0])}</th><td>当日ではないため動きません</td><td></td><td></td></tr>`)
+			tableData.push(`<tr><th><a href="${linkId(item[0])}">${formatIdName(item[0])}</a></th><td>演目はありません</td><td></td><td></td></tr>`)
+			// tableData.push(`<tr><th>${formatIdName(item[0])}</th><td>当日ではないため動きません</td><td></td><td></td></tr>`)
 		}
 	})
 	tableData.push('</tbody>')

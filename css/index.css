@@ -172,7 +172,7 @@ section#time-table h3::after {
 }
 
 
-@media screen and (max-width: 428px) {
+@media screen and (max-width: 600px) {
 	section#title h1 {
 		font-size: 24px;
 	}
@@ -181,6 +181,13 @@ section#time-table h3::after {
 	}
 	section#title p.theme,
 	section#title p.theme::before {
+		font-size: 12px;
+	}
+	#notice-table th,
+	#notice-table td {
+		font-size: 16px;
+	}
+	section#time-table p {
 		font-size: 12px;
 	}
 }

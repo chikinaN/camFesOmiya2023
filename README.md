@@ -108,7 +108,7 @@
 スマホなどでレイアウトが崩れる場合、以下のようにする
 
 ```css
-@media screen and (max-width: 428px) {
+@media screen and (max-width: 600px) {
   .クラス名 {}
 }
 ```
