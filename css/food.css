@@ -220,7 +220,8 @@ span{
 @media screen and (max-width: 600px){
   .takenoko_text{
     font-size: 12px;
-    padding: 5px 0;
+    padding: 0;
+    color: black;
   }
 }
 
@@ -253,6 +254,8 @@ span{
 @media screen and (max-width:600px) {
   .tako_text{
     padding-left: 0;
+    font-size: 12px;
+    color: black;
   }
 }
 @media screen and (max-width :600px) {
@@ -346,5 +349,13 @@ section{
 }
 .navi_under{
   position: absolute;
-  top: 85%;
+  top: 80%;
+  writing-mode: vertical-rl;
+}
+br{
+  margin: 0;
+  padding: 0;
+}
+span{
+  margin-bottom: 0;
 }
