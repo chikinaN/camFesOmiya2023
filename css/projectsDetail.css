@@ -224,6 +224,9 @@
 .tabs {
     width: 90%;
     margin: 0 auto;
+    display: block grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 50px 1fr;
 }
 
 @media screen and (max-width: 428px) {
@@ -234,21 +237,13 @@
 
 /*タブのスタイル*/
 .tab_item {
-    height: 50px;
-    width: 29vw;
+    display: block;
     background-color: #19302a;
     line-height: 50px;
     font-size: 16px;
     text-align: center;
-    display: block;
-    float: left;
     font-weight: bold;
     border-radius: 20px 20px 0 0;
-}
-
-/*タブを中央よせ*/
-.center {
-    margin-left: 2.5vw;
 }
 
 .tab_item:hover {
@@ -257,9 +252,10 @@
 
 .tab_content {
     background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 15px 15px 0 0;
+    border-radius: 0 0 1rem 1rem;
     border: 1px solid #e0e0e0;
-    width: 98%;
+    box-sizing: border-box;
+    grid-area: 2 / 1 / -1 / -1;
 }
 
 @media screen and (max-width: 600px) {
