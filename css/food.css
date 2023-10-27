@@ -83,6 +83,7 @@
 }
 .tab-content.active {
   display: block;
+  box-sizing: border-box; /* こうしないとスマホ表示時にずれる */
 }
 .tab.active{
   background-color: #ccc;
