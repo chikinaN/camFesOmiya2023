@@ -341,3 +341,10 @@ ul{
   justify-content: space-around;
   margin-bottom: 10vh;
 }
+section{
+  position: relative;
+}
+.navi_under{
+  position: absolute;
+  top: 85%;
+}
