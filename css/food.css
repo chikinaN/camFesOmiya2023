@@ -317,6 +317,12 @@ body article > section#food > h2{
   text-align: center;
   padding-top: 5vh;
 }
+@media screen and (max-width:600px) {
+  .about_title{
+    font-size: 20px;
+  }
+  
+}
 .about_text{
   text-align: center;
   font-size: 20px;
