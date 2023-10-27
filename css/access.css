@@ -12,6 +12,10 @@ img{
   display: flex;
 }
 
+#PC > h2{
+  margin-bottom: 50px;
+}
+
 
 #mapPC{
   display: flex;
