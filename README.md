@@ -22,7 +22,7 @@
 [https://camfes-omiya-2023.web.app/](https://camfes-omiya-2023.web.app/)
 
 開発環境
-[https://chikinan.github.io/camFesOmiya2023/](https://chikinan.github.io/camFesOmiya2023/)]
+[https://chikinan.github.io/camFesOmiya2023/](https://chikinan.github.io/camFesOmiya2023/)
 
 ### 新規ページ
 
