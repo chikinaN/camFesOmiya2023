@@ -45,8 +45,8 @@ const buildCurrentMenu = () => {
 		}
 	]
 	const formatTitle = (str) => {
-		if (str.length > 8) {
-			return str.slice(0, 6) + '...';
+		if (str.length > 9) {
+			return str.slice(0, 8) + '...';
 		} else {
 			return str;
 		}
