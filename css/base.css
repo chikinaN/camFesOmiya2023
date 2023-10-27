@@ -209,7 +209,7 @@ nav#nav-list ul#linkMenu li:hover:after {
 		order: -1;
 		flex: 1 0 100%;
 	}
-	header#menuTitle h3 {
+	header#menuTitle h3 a {
 		font-size: 24px;
 	}
 	nav#nav-list ul#currentMenu,
