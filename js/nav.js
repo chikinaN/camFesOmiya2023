@@ -11,6 +11,9 @@ const fetchNav = async (url) => {
     throw error;
   }
 };
+const formatLink = (path) => {
+	return location.pathname.indexOf('/camFesOmiya2023') == -1? path : '/camFesOmiya2023' + path
+}
 
 fetchNav('public/json/pagelist.json')
   .then(jsonData => {
@@ -80,7 +83,7 @@ const navList = (pageList) => {
   }
   const path = formatPathname(location.pathname);
   const currentData = pageList.filter((data) => data.path == path)[0]
-  const h3Title = '<h3>キャンフェス<br>〜京都〜<br>In大宮</h3>'
+  const h3Title = `<h3><a href='${formatPathname('/')}'>キャンフェス<br>〜京都〜<br>In大宮<a></h3>`
   const icon = '<img src="public/img/camfes2023_logo.jpg" alt="icon" id="icon">'
   const menuTitle = "<header id='menuTitle'>" + h3Title + icon + '</header>'
   const currentMenu = "<ul id='currentMenu'>" + buildCurrentMenu(0) + '</ul>'
@@ -148,15 +151,3 @@ menu.addEventListener('click', function(event) {
     document.getElementById('nav-menu').checked = false;
   }
 });
-// ,{
-//   "id": 2,
-//   "name": "timeTable",
-//   "jaName": "タイムテーブル",
-//   "path": "/timetable.html"
-// }
-// ,{
-//   "id" : 6,
-//   "name": "about",
-//   "jaName" : "キャンフェスとは",
-//   "path" : "/about.html"
-// }

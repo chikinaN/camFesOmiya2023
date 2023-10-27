@@ -37,7 +37,6 @@
     padding: 1px;
   }
 }
-/*はるの頭はほぼちんげ*/
 .tab:hover {
   background-color: #e0e0e0;
   color: #19302A;
@@ -83,6 +82,7 @@
 }
 .tab-content.active {
   display: block;
+  box-sizing: border-box; /* こうしないとスマホ表示時にずれる */
 }
 .tab.active{
   background-color: #ccc;

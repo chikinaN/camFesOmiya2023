@@ -74,7 +74,7 @@ const buildLinkMenu = (pageList) => {
 }
 
 const navList = (pageList) => {
-  const h3Title = '<h3>キャンフェス<br>〜京都〜<br>In大宮</h3>'
+  const h3Title = `<h3><a href='${formatPathname('/')}'>キャンフェス<br>〜京都〜<br>In大宮<a></h3>`
   const icon = '<img src="../public/img/camfes2023_logo.jpg" alt="icon" id="icon">'
   const menuTitle = "<header id='menuTitle'>" + h3Title + icon + '</header>'
   const currentMenu = "<ul id='currentMenu'>" + buildCurrentMenu(0) + '</ul>'
