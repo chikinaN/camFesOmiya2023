@@ -110,7 +110,12 @@ nav#nav-list {
 }
 
 input[type="checkbox"]#nav-menu:checked ~ nav#nav-list {
-	clip-path: ellipse(142vmax 142vmax at calc(100vw - 10px) 10px);
+	/* ==== Edit by Ayasaka-Koto : ちゃんとルートを使って表そう！ ==== */
+	--sqrt-two: 1.4142136;
+	@supports (--sqrt-two: sqrt(2)) {
+		--sqrt-two: sqrt(2);
+	}
+	clip-path: ellipse(calc(100vmax * var(--sqrt-two)) calc(100vmax * var(--sqrt-two)) at calc(100vw - 10px) 10px); 
 	background-color: rgb(100 100 100 / var(--nav-back-opacity));
 }
 
