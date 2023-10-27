@@ -88,8 +88,7 @@ const timeData = (jsonData) => {
 	setInterval(IntervalCalcDate, 1000);
 }
 const sTable = (json) => {
-	const dateSample = getDate()
-	const date = [10, 31, dateSample[2], dateSample[3]]
+	const date = getDate()
 	const filterData = (category, date, json) => {
 		return json[category].filter((stage) => {
 			const startTime = stage.time.hour * 60 + stage.time.minutes - stage.duration;
@@ -116,7 +115,7 @@ const sTable = (json) => {
 			tableData.push(sTableFlame(item[0], json.performer, json.title, [json.time.hour, json.time.minutes, json.timeRequired]))
 		} else {
 			// tableData.push(`<tr><th><a href="${linkId(item[0])}">${formatIdName(item[0])}</a></th><td>演目はありません</td><td></td><td></td></tr>`)
-			tableData.push(`<tr><th>${formatIdName(item[0])}</th><td>当日ではありません</td><td></td><td></td></tr>`)
+			tableData.push(`<tr><th>${formatIdName(item[0])}</th><td>当日ではないため動きません</td><td></td><td></td></tr>`)
 		}
 	})
 	tableData.push('</tbody>')
