@@ -29,7 +29,7 @@ const buildCurrentMenu = () => {
 			title: 'DJ'
 		},{
 			name: '/projectsDetail/JapaneseGames.html',
-			title: '昔あそび'
+			title: '日本の遊び'
 		},{
 			name: '/projectsDetail/ONED.html',
 			title: 'ONED'
@@ -38,7 +38,7 @@ const buildCurrentMenu = () => {
 			title: 'おみくじ'
 		},{
 			name: '/projectsDetail/scrunchie.html',
-			title: 'ちりめんものづくり'
+			title: 'かんざし'
 		},{
 			name: '/projectsDetail/smashBros.html',
 			title: 'スマブラ'
