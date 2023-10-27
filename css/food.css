@@ -190,7 +190,7 @@ span{
 }
 @media screen and (max-width: 600px){
   .tako_title{
-    font-size: 20px;
+    font-size: 15px;
   }
 }
 .tea_all{
@@ -211,6 +211,7 @@ span{
   .tea_text{
     padding-top: none;
     padding: 10px;
+    color: black;
   }
 }
 .takenoko_text{
@@ -284,6 +285,7 @@ span{
   .fox_text{
     padding-left: 0;
     font-size: 15px;
+    color: black;
   }
 }
 .caffe_img{
