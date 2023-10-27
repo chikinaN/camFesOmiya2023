@@ -110,7 +110,7 @@ nav#nav-list {
 }
 
 input[type="checkbox"]#nav-menu:checked ~ nav#nav-list {
-	clip-path: ellipse(2000px 2000px at calc(100vw - 10px) 10px);
+	clip-path: ellipse(142vmax 142vmax at calc(100vw - 10px) 10px);
 	background-color: rgb(100 100 100 / var(--nav-back-opacity));
 }
 
