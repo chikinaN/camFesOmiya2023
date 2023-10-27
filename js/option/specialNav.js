@@ -26,27 +26,27 @@ const buildCurrentMenu = () => {
   const idData = [
 		{
 			name: '/projectsDetail/DJ.html',
-			title: 'CLUB Rhelok'
+			title: 'DJ'
 		},{
 			name: '/projectsDetail/JapaneseGames.html',
-			title: '童心に帰って遊ぼう！〜昔あそび×大宮キャンパス〜'
+			title: '昔あそび'
 		},{
 			name: '/projectsDetail/ONED.html',
 			title: 'ONED'
 		},{
 			name: '/projectsDetail/oracle.html',
-			title: '☆ドキドキ♡キャンフェスおみくじ☆'
+			title: 'おみくじ'
 		},{
 			name: '/projectsDetail/scrunchie.html',
-			title: '［無料体験ワークショップ］ちりめんものづくり体験！'
+			title: 'ちりめんものづくり'
 		},{
 			name: '/projectsDetail/smashBros.html',
-			title: 'スマブラ大会in大宮'
+			title: 'スマブラ'
 		}
 	]
 	const formatTitle = (str) => {
 		if (str.length > 8) {
-			return str.slice(0, 6) + '...';
+			return str.slice(0, 7) + '...';
 		} else {
 			return str;
 		}
