@@ -341,6 +341,12 @@ ul{
   padding-top: 5vh;
   text-align: center;
 }
+@media screen and (max-width:600px) {
+  .fox_caffe_p{
+    font-size: 15px;
+  }
+  
+}
 .about_div_under{
   display: flex;
   justify-content: space-around;
