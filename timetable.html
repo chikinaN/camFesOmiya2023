@@ -7,6 +7,7 @@
 		<link rel="icon" href="public/img/camfes2023.ico">
 		<link rel="stylesheet" href="css/initilize.css">
 		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" href="css/timeTable.css">
 		<!-- 画像が重いので事前読み込み -->
 		<link rel="preload" href="public/sample/random_Kyoto_1.jpg" as="image">
 		<link rel="preload" href="public/sample/random_Kyoto_2.jpg" as="image">
@@ -34,22 +35,27 @@
 		</header>
 		<ul id="sideIndex"></ul>
 		<article>
-			<section id="stage">
-				<h2>ステージ</h2>
-			</section>
-			<section id="ONED">
-				<h2>ONED</h2>
-			</section>
-			<section id="DJ">
-				<h2>DJ企画</h2>
-			</section>
-			<section id="smashBros">
-				<h2>スマブラ企画</h2>
+			<section id="timeTable">
+				<h2>タイムテーブル</h2>
+				<div class="dropdown">
+					<button class="drop-btn">
+						ステージ
+					</button>
+					<div class="drop-wrap">
+						<ul class="drop-menu">
+							<li data-link="stage">ステージ</li>
+							<li data-link="ONED">ONED</li>
+							<li data-link="DJ">DJ</li>
+							<li data-link="smashBros">スマブラ大会</li>
+						</ul>
+					</div>
+				</div>
+				<div id="tableWrap">
+				</div>
 			</section>
 		</article>
 		<footer></footer>
 	</body>
-	<!-- <script src="../js/index.js"></script> -->
-	<!-- 後日実装 -->
 	<script src="js/nav.js"></script>
+	<script src="js/timetable.js"></script>
 </html>

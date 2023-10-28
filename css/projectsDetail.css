@@ -19,7 +19,7 @@
     display: none !important;
 }
 
-@media screen and (max-width: 428px) {
+@media screen and (max-width: 600px) {
     .pc {
         display: none !important;
     }
@@ -229,7 +229,7 @@
     grid-template-rows: 50px 1fr;
 }
 
-@media screen and (max-width: 428px) {
+@media screen and (max-width: 600px) {
     .tabs {
         margin-top: -35px;
     }
@@ -326,7 +326,7 @@ table {
     margin: 0 auto;
 }
 
-@media screen and (max-width: 428px) {
+@media screen and (max-width: 600px) {
 
     th,
     td {
@@ -367,7 +367,7 @@ table {
 }
 
 /*pcとスマホでページ数変更*/
-@media screen and (max-width: 428px) {
+@media screen and (max-width: 600px) {
     .DJpc {
         display: none;
     }
