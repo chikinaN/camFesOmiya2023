@@ -3,7 +3,7 @@
 		{
 			"id": 1,
 			"title": "OP",
-			"performer": "",
+			"performer": "実行委員",
 			"type": 1,
 			"date": {
 				"month": 10,
@@ -20,8 +20,8 @@
 			}
 		},{
 			"id": 2,
-			"title": "あや",
-			"performer": "",
+			"title": "歌ってみた",
+			"performer": "あや",
 			"type": 1,
 			"date": {
 				"month": 10,
@@ -38,8 +38,8 @@
 			}
 		},{
 			"id": 3,
-			"title": "こがね",
-			"performer": "",
+			"title": "歌ってみた",
+			"performer": "こがね",
 			"type": 1,
 			"date": {
 				"month": 10,
@@ -56,8 +56,8 @@
 			}
 		},{
 			"id": 4,
-			"title": "海帆",
-			"performer": "",
+			"title": "歌ってみた",
+			"performer": "海帆",
 			"type": 1,
 			"date": {
 				"month": 10,
@@ -74,8 +74,8 @@
 			}
 		},{
 			"id": 5,
-			"title": "Neon",
-			"performer": "",
+			"title": "歌ってみた",
+			"performer": "Neon",
 			"type": 1,
 			"date": {
 				"month": 10,
@@ -92,8 +92,8 @@
 			}
 		},{
 			"id": 6,
-			"title": "りんがるす",
-			"performer": "",
+			"title": "歌ってみた",
+			"performer": "りんがるす",
 			"type": 1,
 			"date": {
 				"month": 10,
@@ -110,8 +110,8 @@
 			}
 		},{
 			"id": 7,
-			"title": "あまと",
-			"performer": "",
+			"title": "踊ってみた",
+			"performer": "あまと",
 			"type": 1,
 			"date": {
 				"month": 10,
@@ -128,8 +128,8 @@
 			}
 		},{
 			"id": 8,
-			"title": "ナユタ",
-			"performer": "",
+			"title": "漫才",
+			"performer": "ナユタ",
 			"type": 1,
 			"date": {
 				"month": 10,
@@ -146,8 +146,8 @@
 			}
 		},{
 			"id": 9,
-			"title": "せつ、ひー、わさび",
-			"performer": "",
+			"title": "踊ってみた",
+			"performer": "せつ、ひー、わさび",
 			"type": 1,
 			"date": {
 				"month": 10,
@@ -164,8 +164,8 @@
 			}
 		},{
 			"id": 10,
-			"title": "京都着ぐるみ紅蓮隊",
-			"performer": "",
+			"title": "踊ってみた",
+			"performer": "京都着ぐるみ紅蓮隊",
 			"type": 1,
 			"date": {
 				"month": 10,
@@ -182,8 +182,8 @@
 			}
 		},{
 			"id": 11,
-			"title": "ナユタ・エイクサン",
-			"performer": "",
+			"title": "歌ってみた",
+			"performer": "ナユタ・エイクサン",
 			"type": 1,
 			"date": {
 				"month": 10,
@@ -200,8 +200,8 @@
 			}
 		},{
 			"id": 12,
-			"title": "jamn",
-			"performer": "",
+			"title": "演奏してみた",
+			"performer": "jamn",
 			"type": 1,
 			"date": {
 				"month": 10,
@@ -218,8 +218,8 @@
 			}
 		},{
 			"id": 13,
-			"title": "わみほ",
-			"performer": "",
+			"title": "弾き語り",
+			"performer": "わみほ",
 			"type": 1,
 			"date": {
 				"month": 10,
@@ -237,7 +237,7 @@
 		},{
 			"id": 14,
 			"title": "ステージED",
-			"performer": "",
+			"performer": "実行委員",
 			"type": 1,
 			"date": {
 				"month": 10,
@@ -281,7 +281,7 @@
 				"day": 28
 			},
 			"time": {
-				"hour": 14,
+				"hour": 13,
 				"minutes": 40
 			},
 			"timeRequired": 10,
@@ -388,7 +388,7 @@
 			"childData": {}
 		},{
 			"id": 3,
-			"title": "EbiOka",
+			"title": "EbiB2BOka",
 			"performer": "",
 			"type": 1,
 			"date": {

@@ -50,6 +50,18 @@
   text-decoration-color: rgb(184, 184, 184, 0.75);
 }
 
+.MapProjectSubHeading{
+  font-size: 1.05em;
+  text-decoration: underline;
+  text-decoration-color: rgb(203, 207, 116);
+  padding-left: 1%;
+}
+
+.tmpFood{
+  font-size: 0.9em;
+  padding-left: 1%;
+}
+
 
 #tttest area#JapaneseGames0:hover ~ #JapaneseGames1,
 #tttest area#stage0:hover ~ #stage1,
@@ -73,7 +85,7 @@
 
 #stage1{
   --back-g-color: rgba(54, 68, 105, 0.85);
-  --supplement-height: 120px;
+  --supplement-height: 200px;
   --supplement-width: 300px;
   --supplement-border-color: rgb(114, 158, 247);
 }
@@ -83,8 +95,8 @@
 
 #food1{
   --back-g-color: rgba(54, 105, 67, 0.85);
-  --supplement-top: calc(-0.825 * var(--supplement-height));
-  --supplement-height: 350px;
+  --supplement-top: calc(-0.75 * var(--supplement-height));
+  --supplement-height: 365px;
   --supplement-width: 300px;
   --supplement-border-color: rgb(114, 247, 158);
 }
@@ -94,7 +106,7 @@
 
 #smashBros1{
   --back-g-color: rgba(105, 54, 66, 0.85);
-  --supplement-height: 260px;
+  --supplement-height: 250px;
   --supplement-width: 300px;
   --supplement-border-color: rgb(247, 114, 145);
 }
@@ -104,7 +116,7 @@
 
 #scrunchie1{
   --back-g-color: rgba(102, 54, 105, 0.85);
-  --supplement-height: 260px;
+  --supplement-height: 250px;
   --supplement-width: 300px;
   --supplement-border-color: rgb(223, 114, 247);
 }

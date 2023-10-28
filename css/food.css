@@ -1,5 +1,5 @@
 @media screen and (max-width:600px){
-  
+
 }
 /*タブのcss*/
 .tab-container {
@@ -53,7 +53,7 @@
   .tab-active.tab::after{
     bottom: 3px;
   }
-  
+
 }
 .tab:hover::after {
   transform: translateX(-50%) scale(1, 1);
@@ -79,7 +79,7 @@
     height: 60vh;
     border-radius: 10px;
   }
-  
+
 }
 .tab-content.active {
   display: block;
@@ -90,7 +90,7 @@
 }
 /*タブのcssここまで*/
 
-/*@media screen and (max-width: 428px) {
+/*@media screen and (max-width: 600px) {
   .クラス名 {}
 }*/
 
@@ -321,7 +321,7 @@ body article > section#food > h2{
   .about_title{
     font-size: 20px;
   }
-  
+
 }
 .about_text{
   text-align: center;
@@ -351,7 +351,7 @@ ul{
   .fox_caffe_p{
     font-size: 15px;
   }
-  
+
 }
 .about_div_under{
   display: flex;
