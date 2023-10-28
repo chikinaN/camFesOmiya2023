@@ -1,6 +1,8 @@
 .dropdown {
   display: inline-block;
   font-size: 14px;
+	margin-left: 10vw;
+	margin-bottom: 10px;
 }
 
 .drop-btn {
@@ -141,6 +143,9 @@
 	--require-time: 0;
 	--until-date: 0;
 }
+.time-main > ul.time-active {
+	background-color: rgba(155, 155, 155, .5);;
+}
 .table-title {
   position: sticky;
   clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
@@ -164,11 +169,36 @@
 	--position: 0;
 	bottom: 0;
 }
+.content {
+	padding-top: 5px;
+	margin-bottom: 5px;
+	border-bottom: 1px #000 dashed;
+}
 .performer {
 	font-size: 0.6rem;
 }
 .performer::before {
 	content: 'by';
+}
+.hover-text * {
+	font-size: small;
+}
+.time-main > ul > li:not(.table-title):hover .table-bubble {
+	display: block;
+}
+.table-bubble {
+  width: 250px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 5px;
+  line-height: 1;
+  position: absolute;
+  border: 1px solid #000;
+	display: flex;
+  transform: translate(-50%, -50%);
+	left: 50%;
+	z-index: 1000;
+	display: none;
 }
 .time-main > ul:nth-child(2) {
 }

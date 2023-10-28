@@ -25,7 +25,7 @@ fetchTable('public/json/timeTable.json')
 
 const createTimeTable = (timeData) => {
 	const changeTimeTable = () => {
-		const hash = window.location.hash == ''? window.location.hash.substring(1): 'stage'
+		const hash = window.location.hash == ''? 'stage': window.location.hash.substring(1)
 		timeTableElement(timeData, hash)
 	}
 	changeTimeTable()
@@ -61,13 +61,43 @@ const timeTableElement = (data, hash) => {
 	tableContent.push("<div id='table-line'></div>")
 	tableContent.push('<div class="time-main">')
 	Object.keys(data).forEach(key => {
-		tableContent.push(`<ul id="${key}">`)
+		tableContent.push(`<ul id="${key}" ${hash == key? "class='time-active'":''}>`)
+		document.querySelector(".drop-btn").innerHTML = formatIdName(hash)
 		tableContent.push(`<li class="table-title">${formatIdName(key)}</li>`)
-		data[key].forEach(keyData => {
+		data[key].forEach((keyData, i) => {
 			const formatTime = (item) => {
 				return (item.hour - 13) * 60 + item.minutes;
 			}
-			tableContent.push(`<li style="--require-time: ${keyData.timeRequired}; --until-date: ${formatTime(keyData.time)};"><span>${keyData.title}</span>${keyData.performer != ''?`<span class='performer'>${keyData.performer}</span>` : ''}</li>`)
+			const tableTime = (time, timeRequired) => {
+				console.log(time.minutes , timeRequired,time.minute + timeRequired >= 60)
+				const zeroData = (num) => {
+					if (num == 0) {
+						return '00'
+					} else {
+						return num
+					}
+				}
+				if (time.minutes + timeRequired >= 60) {
+					const sumMinute = time.minutes + timeRequired - 60
+					return `${time.hour}:${zeroData(time.minutes)} ~ ${time.hour + 1}:${zeroData(sumMinute)}`
+				} else {
+					return `${time.hour}:${zeroData(time.minutes)} ~ ${time.hour}:${zeroData(time.minutes + timeRequired)}`
+				}
+			}
+			tableContent.push(`
+				<li data-id='${i + 1}' style="--require-time: ${keyData.timeRequired}; --until-date: ${formatTime(keyData.time)};">
+					<div class="table-bubble" id='${key}${i + 1}'>
+						<span class='content'>${keyData.title}</span>
+						<div class='hover-text'>
+							${tableTime(keyData.time, keyData.timeRequired)}
+							${keyData.performer != ''?`<span>by${keyData.performer}</span>` : ''}
+							${keyData.childData.noiseLevel != undefined?`<span>音レベル${keyData.childData.noiseLevel}</span>` : ''}
+						</div>
+					</div>
+					<span class='content'>${keyData.title}</span>
+					${keyData.performer != ''?`<span class='performer'>${keyData.performer}</span>` : ''}
+				</li>`
+			)
 		})
 		tableContent.push('</ul>')
 	})
@@ -118,7 +148,6 @@ const items = dropdownMenu.querySelectorAll("li");
 
 items.forEach((item) => {
 	item.addEventListener("click", () => {
-		button.innerText = item.innerText;
 		window.location.hash = encodeURIComponent(item.getAttribute('data-link'));
 		items.forEach((i) => {
 				i.classList.remove("active-item");
